@@ -1,24 +1,22 @@
 using MiniSDK.Core.Module;
+using MiniSDK.PubSub;
 using Newtonsoft.Json;
 using MiniSDK.PubSub.Data;
 
 namespace MiniSDK.Native
 {
-    public class NativeRelay : WatcherModuleBase
+    public class NativeRelay : ModuleBase
     {
         private INativeBridge bridge;
-
-        protected override void InitializeNativeModule()
-        {
-            base.InitializeNativeModule();
-            bridge = new NativeBridge();
-            bridge.SetNativeCallbackListener(OnReceiveFromNative);
-        }
+        private Watcher watcher;
 
         public override void Initialize()
         {
             base.Initialize();
-            Watcher.Watch(OnWatch);
+            watcher = new Watcher();
+            watcher.Watch(OnWatch);
+            bridge = new NativeBridge();
+            bridge.SetNativeCallbackListener(OnReceiveFromNative);
         }
 
         private void OnReceiveFromNative(string info, string json)
@@ -29,7 +27,7 @@ namespace MiniSDK.Native
                 Json = json
             };
         
-            Watcher.Publish(message);
+            watcher.Publish(message);
         }
 
         private void OnWatch(Message message)

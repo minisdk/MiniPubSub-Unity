@@ -24,28 +24,26 @@ public struct ToastResult
     public string ToastCount;
 }
 
-public class SampleKit : MessengerModuleBase
+public class SampleKit : ModuleBase
 {
 #if UNITY_IOS
     [DllImport("__Internal")]
     private static extern void __iOSSampleKitLoad();
 #endif
 
+    private Messenger messenger;
+
     public override void Initialize()
     {
         base.Initialize();
-        Messenger.Subscribe("SEND_TOAST_RESULT", OnNative);
-    }
-
-    protected override void InitializeNativeModule()
-    {
-        base.InitializeNativeModule();
 #if UNITY_ANDROID
         AndroidJavaObject loaderObject = new AndroidJavaObject("com.pj.sample.SampleKitLoader");
         loaderObject.Call<string>("loadModule");
 #elif UNITY_IOS
         __iOSSampleKitLoad(); 
 #endif
+        messenger = new Messenger();
+        messenger.Subscribe("SEND_TOAST_RESULT", OnNative);
     }
 
     private void OnNative(Message message)
@@ -55,6 +53,6 @@ public class SampleKit : MessengerModuleBase
 
     public void CallTest()
     {
-        Messenger.Publish(new Message("SEND_TOAST", new ToastData{ToastDuration = 1, ToastMessage = "toast of unity"}));
+        messenger.Publish(new Message("SEND_TOAST", new ToastData{ToastDuration = 1, ToastMessage = "toast of unity"}));
     }
 }

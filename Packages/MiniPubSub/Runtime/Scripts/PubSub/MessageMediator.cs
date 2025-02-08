@@ -5,17 +5,12 @@ using MiniSDK.PubSub.Data;
 
 namespace MiniSDK.PubSub
 {
-    public interface MessageMediator
+    internal interface MessageMediator
     {
         void Register(Receiver receiver);
         void Unregister(int id, string key);
-
-        void Watch(Receiver receiver);
-        void Unwatch(int id);
-        
-        
-        void Publish(Message message, int publisherID);
-
+        void RegisterInstantReceiver(Receiver receiver);
+        void Broadcast(Request request);
     }
 
 }

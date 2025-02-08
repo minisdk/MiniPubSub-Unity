@@ -21,19 +21,18 @@ namespace MiniSDK.Native
 
         private void OnReceiveFromNative(string info, string json)
         {
-            Message message = new Message
-            {
-                Info = JsonConvert.DeserializeObject<MessageInfo>(info), 
-                Json = json
-            };
-        
-            watcher.Publish(message);
+            Request request = new Request
+            (
+                JsonConvert.DeserializeObject<RequestInfo>(info), 
+                json
+            );
+            MessageManager.Instance.Mediator.Broadcast(request);
         }
 
-        private void OnWatch(Message message)
+        private void OnWatch(Request request)
         {
-            string info = JsonConvert.SerializeObject(message.Info);
-            bridge.Send(info, message.Json);
+            string info = JsonConvert.SerializeObject(request.Info);
+            bridge.Send(info, request.Json);
         }
 
     }

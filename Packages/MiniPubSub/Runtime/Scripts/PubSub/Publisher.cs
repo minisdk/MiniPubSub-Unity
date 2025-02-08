@@ -1,28 +1,29 @@
+using System.Threading;
 using MiniSDK.PubSub.Data;
 
 namespace MiniSDK.PubSub
 {
-    public enum PublisherType
-    {
-        Android     = 10000,
-        IOS         = 20000,
-        Game        = 30000
-    }
-
     public class Publisher : Node
     {
-        #region IdGenerator
-        private static int _idGen = (int) PublisherType.Game;
-        private static int IssueID() { return ++_idGen; }
-        #endregion
+        private static int _responseIdGen = (int)SdkType.Game; 
         
-        public int Id { get; } = IssueID();
-
-        public void Publish(Message message)
+        public void Publish(string key, Message message)
         {
-            MessageManager.Instance.Mediator.Publish(message, Id);
+            Request request = new Request(key, message.Json, -1, "");
+            MessageManager.Instance.Mediator.Broadcast(request);
         }
 
+        public void Publish(string key, Message message, ReceiveDelegate responseCallback)
+        {
+            // Create responseKey
+            string responseKey = $"{key}_id{SdkUtil.IssueID(ref _responseIdGen)}";
+            // Register instant receiver
+            Receiver receiver = new Receiver(-1, responseKey, responseCallback);
+            MessageManager.Instance.Mediator.RegisterInstantReceiver(receiver);
+            // Broadcast request
+            Request request = new Request(key, message.Json, Id, responseKey);
+            MessageManager.Instance.Mediator.Broadcast(request);
+        }
     }
     
 }

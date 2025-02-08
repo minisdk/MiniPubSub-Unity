@@ -5,12 +5,8 @@ using MiniSDK.PubSub.Data;
 
 namespace MiniSDK.PubSub
 {
-    public sealed class Messenger : Node
+    public sealed class Messenger : Publisher
     {
-        private readonly Publisher publisher = new Publisher();
-        
-        public int Id => publisher.Id;
-
         public void Subscribe(string key, ReceiveDelegate receiveDelegate)
         {
             Receiver receiver = new Receiver(this.Id, key, receiveDelegate);
@@ -20,11 +16,6 @@ namespace MiniSDK.PubSub
         public void Unsubscribe(string key)
         {
             MessageManager.Instance.Mediator.Unregister(Id, key);   
-        }
-        
-        public void Publish(Message message)
-        {
-            publisher.Publish(message);
         }
 
     }

@@ -6,9 +6,9 @@ namespace MiniSDK.PubSub
 {
     internal class MessageMediatorImpl : MessageMediator
     {
-        // private Dictionary<int, Subscribable>
+        private static string WatcherKey => "Key_Watcher_Reserved";
         private readonly ConcurrentDictionary<string, List<Receiver>> receiverDic = new ConcurrentDictionary<string, List<Receiver>>();
-        private readonly ConcurrentDictionary<int, Receiver> watcherDic = new ConcurrentDictionary<int, Receiver>();
+        private readonly ConcurrentDictionary<string, Receiver> instantReceiverDic = new ConcurrentDictionary<string, Receiver>();
         
         public void Register(string key, Receiver receiver)
         {
@@ -42,34 +42,37 @@ namespace MiniSDK.PubSub
                 receivers.RemoveAll(receiver => receiver.NodeId == id);
             }
         }
-
-        public void Watch(Receiver receiver)
+        
+        public void RegisterInstantReceiver(Receiver receiver)
         {
-            watcherDic[receiver.NodeId] = receiver;
+            instantReceiverDic[receiver.Key] = receiver;
         }
 
-        public void Unwatch(int id)
+        public void Broadcast(Request request)
         {
-            watcherDic.Remove(id, out var receiver);
-        }
-
-        public void Publish(Message message, int publisherID)
-        {
-            if (receiverDic.TryGetValue(message.Key, out var receivers))
+            if (instantReceiverDic.TryRemove(request.Key, out var instantReceiver))
+            {
+                instantReceiver.ReceiverDelegate?.Invoke(request);
+            }
+            
+            if (receiverDic.TryGetValue(request.Key, out var receivers))
             {
                 foreach (var receiver in receivers)
                 {
-                    if(receiver.NodeId == publisherID) 
+                    if(receiver.NodeId == request.Info.RequestOwnerId) 
                         continue;
-                    receiver.ReceiverDelegate?.Invoke(message);
+                    receiver.ReceiverDelegate?.Invoke(request);
                 }
             }
 
-            foreach (var watcher in watcherDic.Values)
+            if (receiverDic.TryGetValue(WatcherKey, out var watchers))
             {
-                if(watcher.NodeId == publisherID) 
-                    continue;
-                watcher.ReceiverDelegate?.Invoke(message);
+                foreach (var watcher in watchers)
+                {
+                    if(watcher.NodeId == request.Info.RequestOwnerId) 
+                        continue;
+                    watcher.ReceiverDelegate?.Invoke(request);
+                }
             }
         }
 

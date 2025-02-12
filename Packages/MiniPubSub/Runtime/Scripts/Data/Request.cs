@@ -2,16 +2,31 @@ using Newtonsoft.Json;
 
 namespace MiniSDK.PubSub.Data
 {
-    public struct RequestInfo
+    public struct NodeInfo
     {
         [JsonProperty(PropertyName = "requestOwnerId")]
         public int RequestOwnerId;
+
+        [JsonProperty(PropertyName = "publisherId")]
+        public int PublisherId;
+    }
+    
+    public struct RequestInfo
+    {
+        [JsonProperty(PropertyName = "nodeInfo")]
+        public NodeInfo NodeInfo;
         [JsonProperty(PropertyName = "key")]
         public string Key;
         [JsonProperty(PropertyName = "responseKey")]
         public string ResponseKey;
 
-        public bool IsResponsible => string.IsNullOrEmpty(ResponseKey);
+        [JsonIgnore]
+        public bool IsResponsible => !string.IsNullOrEmpty(ResponseKey);
+    }
+
+    public struct ResponseInfo
+    {
+        public string Key;
     }
     
     public struct Request
@@ -21,6 +36,7 @@ namespace MiniSDK.PubSub.Data
         [JsonProperty(PropertyName = "json")]
         public string Json;
 
+        [JsonIgnore]
         public string Key => Info.Key;
         
         public T Data<T>()
@@ -28,12 +44,12 @@ namespace MiniSDK.PubSub.Data
             return JsonConvert.DeserializeObject<T>(Json);
         }
         
-        public Request(string key, string json, int requestOwnerId, string responseKey)
+        public Request(NodeInfo nodeInfo, string key, string json, string responseKey)
         {
             Info = new RequestInfo
             {
+                NodeInfo = nodeInfo,
                 Key = key, 
-                RequestOwnerId = requestOwnerId,
                 ResponseKey = responseKey
             };
             Json = json;
@@ -45,10 +61,9 @@ namespace MiniSDK.PubSub.Data
             Json = json;
         }
 
-        public Request CreateResponse(Message message)
+        public ResponseInfo GetResponseInfo()
         {
-            Request request = new Request(Info.ResponseKey, message.Json, -1, "");
-            return request;
+            return new ResponseInfo{Key = Info.ResponseKey};
         }
     }
 }

@@ -8,7 +8,6 @@ namespace MiniSDK.PubSub
         public void Watch(ReceiveDelegate receiverDelegate)
         {
             Receiver receiver = new Receiver(Id, WatcherKey, receiverDelegate);
-            // TODO : Register 활용 가능할 듯, Watcher용 키는 Watcher끼리 공유하고
             MessageManager.Instance.Mediator.Register(receiver);
         }
 

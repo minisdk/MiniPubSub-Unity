@@ -9,7 +9,8 @@ namespace MiniSDK.PubSub
         
         public void Publish(string key, Message message)
         {
-            Request request = new Request(key, message.Json, -1, "");
+            NodeInfo nodeInfo = new NodeInfo() { RequestOwnerId = Id, PublisherId = Id };
+            Request request = new Request(nodeInfo, key, message.Json, "");
             MessageManager.Instance.Mediator.Broadcast(request);
         }
 
@@ -21,7 +22,18 @@ namespace MiniSDK.PubSub
             Receiver receiver = new Receiver(-1, responseKey, responseCallback);
             MessageManager.Instance.Mediator.RegisterInstantReceiver(receiver);
             // Broadcast request
-            Request request = new Request(key, message.Json, Id, responseKey);
+            NodeInfo nodeInfo = new NodeInfo() { RequestOwnerId = Id, PublisherId = Id };
+            Request request = new Request(nodeInfo, key, message.Json, responseKey);
+            MessageManager.Instance.Mediator.Broadcast(request);
+        }
+
+        public void Respond(ResponseInfo responseInfo, Message message)
+        {
+            Request request = new Request(new NodeInfo
+            {
+                PublisherId = Id,
+                RequestOwnerId = Id
+            }, responseInfo.Key, message.Json, "");
             MessageManager.Instance.Mediator.Broadcast(request);
         }
     }

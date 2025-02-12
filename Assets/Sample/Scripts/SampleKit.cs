@@ -50,8 +50,8 @@ public class SampleKit : ModuleBase
         // testMessenger.Subscribe("SEND_TOAST_ASYNC", request =>
         // {
         //     Debug.Log("[unity pubsubtest] response test...");
-        //     Request response = request.CreateResponse(new Message(new ToastResult { ToastCount = "999" }));
-        //     MessageManager.Respond(response);
+        //     ResponseInfo responseInfo = request.GetResponseInfo();
+        //     testMessenger.Respond(responseInfo, new Message(new ToastResult { ToastCount = "999" }));
         // });
     }
 

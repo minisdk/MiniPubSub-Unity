@@ -1,6 +1,8 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using MiniSDK.PubSub.Data;
+using Newtonsoft.Json;
+using UnityEngine;
 
 namespace MiniSDK.PubSub
 {
@@ -59,7 +61,7 @@ namespace MiniSDK.PubSub
             {
                 foreach (var receiver in receivers)
                 {
-                    if(receiver.NodeId == request.Info.RequestOwnerId) 
+                    if(receiver.NodeId == request.Info.NodeInfo.PublisherId) 
                         continue;
                     receiver.ReceiverDelegate?.Invoke(request);
                 }
@@ -69,7 +71,7 @@ namespace MiniSDK.PubSub
             {
                 foreach (var watcher in watchers)
                 {
-                    if(watcher.NodeId == request.Info.RequestOwnerId) 
+                    if(watcher.NodeId == request.Info.NodeInfo.PublisherId) 
                         continue;
                     watcher.ReceiverDelegate?.Invoke(request);
                 }

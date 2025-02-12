@@ -2,6 +2,7 @@ using MiniSDK.Core.Module;
 using MiniSDK.PubSub;
 using Newtonsoft.Json;
 using MiniSDK.PubSub.Data;
+using UnityEngine;
 
 namespace MiniSDK.Native
 {
@@ -21,9 +22,16 @@ namespace MiniSDK.Native
 
         private void OnReceiveFromNative(string info, string json)
         {
+            RequestInfo requestInfo = JsonConvert.DeserializeObject<RequestInfo>(info);
+            NodeInfo nodeInfo = new NodeInfo { RequestOwnerId = requestInfo.NodeInfo.RequestOwnerId, PublisherId = watcher.Id };
             Request request = new Request
             (
-                JsonConvert.DeserializeObject<RequestInfo>(info), 
+                new RequestInfo
+                {
+                    NodeInfo = nodeInfo,
+                    Key = requestInfo.Key,
+                    ResponseKey = requestInfo.ResponseKey
+                },
                 json
             );
             MessageManager.Instance.Mediator.Broadcast(request);

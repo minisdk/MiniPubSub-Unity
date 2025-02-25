@@ -1,0 +1,4 @@
+framework module MiniPubSub {
+  header "MiniPubSub-Swift.h"
+  requires objc
+}

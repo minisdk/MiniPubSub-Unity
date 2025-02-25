@@ -1,0 +1,93 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MiniPubSub
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum SdkType : Swift.Int {
+  case native
+  case game
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class IdConuter {
+  public func getNext() -> Swift.Int
+  @objc deinit
+}
+@objc public protocol ModuleBase {
+  @objc func getName() -> Swift.String
+}
+public struct NodeInfo : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RequestInfo : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ResponseInfo {
+}
+public struct Request {
+  public let info: MiniPubSub.RequestInfo
+  public let json: Swift.String
+  public var key: Swift.String {
+    get
+  }
+  public func data<T>() -> T? where T : Swift.Decodable, T : Swift.Encodable
+  public func getResponseInfo() -> MiniPubSub.ResponseInfo
+}
+@_inheritsConvenienceInitializers public class Watcher : MiniPubSub.Node {
+  public init()
+  public func watch(delegate: @escaping MiniPubSub.ReceiverDelegate)
+  public func unwatch()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class Messenger : MiniPubSub.Publisher {
+  public init()
+  final public func subscribe(key: Swift.String, delegate: @escaping MiniPubSub.ReceiverDelegate)
+  final public func unsubscribe(key: Swift.String)
+  @objc deinit
+}
+public typealias ReceiverDelegate = (MiniPubSub.Request) -> ()
+@_hasMissingDesignatedInitializers public class Node {
+  @objc deinit
+}
+@objc public protocol SwiftCallback {
+  @objc func fromSwift(info: Swift.String, data: Swift.String)
+}
+@objc public class GameRelay : ObjectiveC.NSObject {
+  @objc public init(callback: any MiniPubSub.SwiftCallback)
+  @objc public func send(info: Swift.String, data: Swift.String)
+  @objc deinit
+}
+public class Message {
+  final public let json: Swift.String
+  public init<T>(data: T) where T : Swift.Decodable, T : Swift.Encodable
+  public func data<T>() -> T? where T : Swift.Decodable, T : Swift.Encodable
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class ModuleManager : ObjectiveC.NSObject {
+  @objc public static let shared: MiniPubSub.ModuleManager
+  @objc public func add(name moduleName: Swift.String, module moduleBase: any MiniPubSub.ModuleBase)
+  @objc public func remove(name moduleName: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Publisher : MiniPubSub.Node {
+  public func publish(key: Swift.String, message: MiniPubSub.Message)
+  public func publish(key: Swift.String, message: MiniPubSub.Message, responseCallback: @escaping MiniPubSub.ReceiverDelegate)
+  public func respond(responseInfo: MiniPubSub.ResponseInfo, message: MiniPubSub.Message)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class MessageManager {
+  public static let shared: MiniPubSub.MessageManager
+  @objc deinit
+}
+extension MiniPubSub.SdkType : Swift.Equatable {}
+extension MiniPubSub.SdkType : Swift.Hashable {}
+extension MiniPubSub.SdkType : Swift.RawRepresentable {}

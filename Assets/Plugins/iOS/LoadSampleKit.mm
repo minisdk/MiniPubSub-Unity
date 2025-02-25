@@ -4,6 +4,6 @@ extern "C"
 {
     void __iOSSampleKitLoad()
     {
-        [[[SampleKitLoader alloc] init] loadModule];
+        [[[SampleKitLoader alloc] init] mount];
     }
 }

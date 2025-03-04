@@ -277,7 +277,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import MiniPubSub;
 @import ObjectiveC;
 #endif
 
@@ -299,12 +298,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-@class NSString;
 
 SWIFT_CLASS("_TtC6sample9SampleKit")
-@interface SampleKit : NSObject <ModuleBase>
-- (NSString * _Nonnull)getName SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@interface SampleKit : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) SampleKit * _Nonnull shared;)
++ (SampleKit * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)prepare;
 @end
 
 #endif

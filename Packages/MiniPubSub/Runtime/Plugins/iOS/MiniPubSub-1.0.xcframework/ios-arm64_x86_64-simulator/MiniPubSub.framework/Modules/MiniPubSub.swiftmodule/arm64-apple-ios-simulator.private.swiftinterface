@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MiniPubSub
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MiniPubSub
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 import Swift
@@ -19,9 +19,6 @@ public enum SdkType : Swift.Int {
 @_hasMissingDesignatedInitializers public class IdConuter {
   public func getNext() -> Swift.Int
   @objc deinit
-}
-@objc public protocol ModuleBase {
-  @objc func getName() -> Swift.String
 }
 public struct NodeInfo : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -70,12 +67,6 @@ public class Message {
   final public let json: Swift.String
   public init<T>(data: T) where T : Swift.Decodable, T : Swift.Encodable
   public func data<T>() -> T? where T : Swift.Decodable, T : Swift.Encodable
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class ModuleManager : ObjectiveC.NSObject {
-  @objc public static let shared: MiniPubSub.ModuleManager
-  @objc public func add(name moduleName: Swift.String, module moduleBase: any MiniPubSub.ModuleBase)
-  @objc public func remove(name moduleName: Swift.String)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Publisher : MiniPubSub.Node {

@@ -34,32 +34,9 @@
         "printedName": "SampleKit",
         "children": [
           {
-            "kind": "Function",
-            "name": "getName",
-            "printedName": "getName()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@sample@objc(cs)SampleKit(im)getName",
-            "mangledName": "$s6sample9SampleKitC7getNameSSyF",
-            "moduleName": "sample",
-            "objc_name": "getName",
-            "declAttributes": [
-              "ObjC",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -68,19 +45,67 @@
                 "usr": "c:@M@sample@objc(cs)SampleKit"
               }
             ],
-            "declKind": "Constructor",
-            "usr": "c:@M@sample@objc(cs)SampleKit(im)init",
-            "mangledName": "$s6sample9SampleKitCACycfc",
+            "declKind": "Var",
+            "usr": "c:@M@sample@objc(cs)SampleKit(cpy)shared",
+            "mangledName": "$s6sample9SampleKitC6sharedACvpZ",
             "moduleName": "sample",
-            "overriding": true,
-            "objc_name": "init",
+            "static": true,
             "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override",
-              "AccessControl"
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
             ],
-            "init_kind": "Designated"
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SampleKit",
+                    "printedName": "sample.SampleKit",
+                    "usr": "c:@M@sample@objc(cs)SampleKit"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@sample@objc(cs)SampleKit(cm)shared",
+                "mangledName": "$s6sample9SampleKitC6sharedACvgZ",
+                "moduleName": "sample",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "prepare",
+            "printedName": "prepare()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@sample@objc(cs)SampleKit(im)prepare",
+            "mangledName": "$s6sample9SampleKitC7prepareyyF",
+            "moduleName": "sample",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -89,21 +114,16 @@
         "moduleName": "sample",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
           "ObjectiveC.NSObject"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ModuleBase",
-            "printedName": "ModuleBase",
-            "usr": "c:@M@MiniPubSub@objc(pl)ModuleBase",
-            "mangledName": "$s10MiniPubSub10ModuleBaseP"
-          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -161,120 +181,113 @@
   "ConstValues": [
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "StringLiteral",
-      "offset": 392,
-      "length": 11,
-      "value": "\"SampleKit\""
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "IntegerLiteral",
-      "offset": 470,
+      "offset": 436,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 596,
+      "offset": 601,
       "length": 12,
       "value": "\"SEND_TOAST\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 641,
+      "offset": 646,
       "length": 61,
       "value": "\"[pubsubtest] key : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 675,
+      "offset": 680,
       "length": 7,
       "value": "\" message : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 701,
+      "offset": 706,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1200,
+      "offset": 1064,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 1291,
+      "offset": 1155,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "IntegerLiteral",
-      "offset": 1366,
+      "offset": 1230,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1482,
+      "offset": 1346,
       "length": 19,
       "value": "\"SEND_TOAST_RESULT\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1601,
+      "offset": 1465,
       "length": 18,
       "value": "\"SEND_TOAST_ASYNC\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1652,
+      "offset": 1516,
       "length": 61,
       "value": "\"[pubsubtest] key : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1686,
+      "offset": 1550,
       "length": 7,
       "value": "\" message : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1712,
+      "offset": 1576,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 2070,
+      "offset": 1934,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 2161,
+      "offset": 2025,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "IntegerLiteral",
-      "offset": 2236,
+      "offset": 2100,
       "length": 1,
       "value": "1"
     }

@@ -39,8 +39,8 @@ public class SampleKit : ModuleBase
     {
         base.Initialize();
 #if UNITY_ANDROID
-        AndroidJavaObject loaderObject = new AndroidJavaObject("com.pj.sample.SampleKitLoader");
-        loaderObject.Call<string>("loadModule");
+        AndroidJavaClass loaderClass = new AndroidJavaClass("com.pj.sample.SampleKitLoader");
+        loaderClass.CallStatic("load");
 #elif UNITY_IOS
         __iOSSampleKitLoad(); 
 #endif

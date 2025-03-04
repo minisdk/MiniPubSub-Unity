@@ -310,23 +310,6 @@ SWIFT_CLASS("_TtC10MiniPubSub9GameRelay")
 @end
 
 
-SWIFT_PROTOCOL("_TtP10MiniPubSub10ModuleBase_")
-@protocol ModuleBase
-- (NSString * _Nonnull)getName SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC10MiniPubSub13ModuleManager")
-@interface ModuleManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ModuleManager * _Nonnull shared;)
-+ (ModuleManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (void)addWithName:(NSString * _Nonnull)moduleName module:(id <ModuleBase> _Nonnull)moduleBase;
-- (void)removeWithName:(NSString * _Nonnull)moduleName;
-@end
-
-
 SWIFT_PROTOCOL("_TtP10MiniPubSub13SwiftCallback_")
 @protocol SwiftCallback
 - (void)fromSwiftWithInfo:(NSString * _Nonnull)info data:(NSString * _Nonnull)data;
@@ -649,23 +632,6 @@ SWIFT_CLASS("_TtC10MiniPubSub9GameRelay")
 - (void)sendWithInfo:(NSString * _Nonnull)info data:(NSString * _Nonnull)data;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_PROTOCOL("_TtP10MiniPubSub10ModuleBase_")
-@protocol ModuleBase
-- (NSString * _Nonnull)getName SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-SWIFT_CLASS("_TtC10MiniPubSub13ModuleManager")
-@interface ModuleManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) ModuleManager * _Nonnull shared;)
-+ (ModuleManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (void)addWithName:(NSString * _Nonnull)moduleName module:(id <ModuleBase> _Nonnull)moduleBase;
-- (void)removeWithName:(NSString * _Nonnull)moduleName;
 @end
 
 

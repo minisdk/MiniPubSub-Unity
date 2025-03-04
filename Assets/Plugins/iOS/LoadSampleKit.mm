@@ -1,9 +1,9 @@
-#import <Sample/SampleKitLoader.h>
+#import <sample/sample-Swift.h>
 
 extern "C"
 {
     void __iOSSampleKitLoad()
     {
-        [[[SampleKitLoader alloc] init] mount];
+        [[SampleKit shared] prepare];
     }
 }

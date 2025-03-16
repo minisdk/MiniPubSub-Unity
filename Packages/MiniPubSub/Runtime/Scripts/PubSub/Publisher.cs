@@ -5,36 +5,36 @@ namespace MiniSDK.PubSub
 {
     public class Publisher : Node
     {
-        private static int _responseIdGen = (int)SdkType.Game; 
+        private static readonly IdCounter IdCounter = new IdCounter();
         
-        public void Publish(string key, Message message)
+        public void Publish(string key, Payload payload)
         {
-            NodeInfo nodeInfo = new NodeInfo() { RequestOwnerId = Id, PublisherId = Id };
-            Request request = new Request(nodeInfo, key, message.Json, "");
-            MessageManager.Instance.Mediator.Broadcast(request);
+            NodeInfo nodeInfo = new NodeInfo() { MessageOwnerId = Id, PublisherId = Id };
+            Message message = new Message(nodeInfo, key, payload, "");
+            MessageManager.Instance.Mediator.Broadcast(message);
         }
 
-        public void Publish(string key, Message message, ReceiveDelegate responseCallback)
+        public void Publish(string key, Payload payload, ReceiveDelegate responseCallback)
         {
-            // Create responseKey
-            string responseKey = $"{key}_id{SdkUtil.IssueID(ref _responseIdGen)}";
+            // Create replyKey
+            string replyKey = $"{key}_id{IdCounter.GetNext()}";
             // Register instant receiver
-            Receiver receiver = new Receiver(-1, responseKey, responseCallback);
+            Receiver receiver = new Receiver(-1, replyKey, responseCallback);
             MessageManager.Instance.Mediator.RegisterInstantReceiver(receiver);
-            // Broadcast request
-            NodeInfo nodeInfo = new NodeInfo() { RequestOwnerId = Id, PublisherId = Id };
-            Request request = new Request(nodeInfo, key, message.Json, responseKey);
-            MessageManager.Instance.Mediator.Broadcast(request);
+            // Broadcast message
+            NodeInfo nodeInfo = new NodeInfo() { MessageOwnerId = Id, PublisherId = Id };
+            Message message = new Message(nodeInfo, key, payload, replyKey);
+            MessageManager.Instance.Mediator.Broadcast(message);
         }
 
-        public void Respond(ResponseInfo responseInfo, Message message)
+        public void Reply(MessageInfo receivedMessageInfo, Payload payload)
         {
-            Request request = new Request(new NodeInfo
+            Message message = new Message(new NodeInfo
             {
                 PublisherId = Id,
-                RequestOwnerId = Id
-            }, responseInfo.Key, message.Json, "");
-            MessageManager.Instance.Mediator.Broadcast(request);
+                MessageOwnerId = Id
+            }, receivedMessageInfo.ReplyKey, payload, "");
+            MessageManager.Instance.Mediator.Broadcast(message);
         }
     }
     

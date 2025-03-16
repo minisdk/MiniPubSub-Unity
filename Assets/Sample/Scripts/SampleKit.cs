@@ -1,13 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using MiniSDK.Core.Module;
 using MiniSDK.PubSub;
 using MiniSDK.PubSub.Data;
 using Newtonsoft.Json;
 using UnityEngine;
 
+#if UNITY_IOS
+using System.Runtime.InteropServices;
+#endif
 
 public struct ToastData
 {
@@ -24,7 +22,7 @@ public struct ToastResult
     public string ToastCount;
 }
 
-public class SampleKit : ModuleBase
+public class SampleKit
 {
 #if UNITY_IOS
     [DllImport("__Internal")]
@@ -35,9 +33,8 @@ public class SampleKit : ModuleBase
     
     // private Messenger testMessenger;
 
-    public override void Initialize()
+    public void Initialize()
     {
-        base.Initialize();
 #if UNITY_ANDROID
         AndroidJavaClass loaderClass = new AndroidJavaClass("com.pj.sample.SampleKitLoader");
         loaderClass.CallStatic("load");
@@ -46,32 +43,25 @@ public class SampleKit : ModuleBase
 #endif
         messenger = new Messenger();
         messenger.Subscribe("SEND_TOAST_RESULT", OnNative);
-        // testMessenger = new Messenger();
-        // testMessenger.Subscribe("SEND_TOAST_ASYNC", request =>
-        // {
-        //     Debug.Log("[unity pubsubtest] response test...");
-        //     ResponseInfo responseInfo = request.GetResponseInfo();
-        //     testMessenger.Respond(responseInfo, new Message(new ToastResult { ToastCount = "999" }));
-        // });
     }
 
-    private void OnNative(Request request)
+    private void OnNative(Message message)
     {
-        Debug.Log("[unity pubsubtest] message toast count : " + request.Data<ToastResult>().ToastCount);
+        Debug.Log("[unity pubsubtest] message toast count : " + message.Data<ToastResult>().ToastCount);
     }
 
     public void CallTest()
     {
-        messenger.Publish("SEND_TOAST", new Message(new ToastData{ToastDuration = 1, ToastMessage = "toast of unity"}));
+        messenger.Publish("SEND_TOAST", new Payload(new ToastData{ToastDuration = 1, ToastMessage = "toast of unity"}));
     }
 
     public void AsyncCallTest()
     {
-        Message message = new Message(
+        Payload payload = new Payload(
             new ToastData { ToastDuration = 1, ToastMessage = "[unity] toast async call" });
-        messenger.Publish("SEND_TOAST_ASYNC", message, receivedMessage =>
+        messenger.Publish("SEND_TOAST_ASYNC", payload, receivedMessage =>
         {
-            Debug.Log("[unity pubsubtest] received async message toast count :  + " + receivedMessage.Data<ToastResult>().ToastCount);
+            Debug.Log("[unity pubsubtest] received async payload toast count :  + " + receivedMessage.Data<ToastResult>().ToastCount);
         });
     }
 }

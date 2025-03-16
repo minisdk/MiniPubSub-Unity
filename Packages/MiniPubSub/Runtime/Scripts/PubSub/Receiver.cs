@@ -3,7 +3,7 @@ using MiniSDK.PubSub.Data;
 
 namespace MiniSDK.PubSub
 {
-    public delegate void ReceiveDelegate(Request request);
+    public delegate void ReceiveDelegate(Message message);
     public class Receiver
     {
         public readonly int NodeId;

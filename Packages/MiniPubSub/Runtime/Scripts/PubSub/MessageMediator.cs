@@ -10,7 +10,7 @@ namespace MiniSDK.PubSub
         void Register(Receiver receiver);
         void Unregister(int id, string key);
         void RegisterInstantReceiver(Receiver receiver);
-        void Broadcast(Request request);
+        void Broadcast(Message message);
     }
 
 }

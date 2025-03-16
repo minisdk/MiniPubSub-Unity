@@ -1,21 +1,54 @@
 using Newtonsoft.Json;
-using UnityEngine;
 
 namespace MiniSDK.PubSub.Data
 {
-    public class Message
+    public struct NodeInfo
     {
-        public string Json;
+        [JsonProperty(PropertyName = "messageOwnerId")]
+        public int MessageOwnerId;
+
+        [JsonProperty(PropertyName = "publisherId")]
+        public int PublisherId;
+    }
+    
+    public struct MessageInfo
+    {
+        [JsonProperty(PropertyName = "nodeInfo")]
+        public NodeInfo NodeInfo;
+        [JsonProperty(PropertyName = "key")]
+        public string Key;
+        [JsonProperty(PropertyName = "replyKey")]
+        public string ReplyKey;
+    }
+    
+    public struct Message
+    {
+        public MessageInfo Info;
+        public Payload Payload;
+
+        [JsonIgnore]
+        public string Key => Info.Key;
         
         public T Data<T>()
         {
-            return JsonConvert.DeserializeObject<T>(Json);
+            return JsonConvert.DeserializeObject<T>(Payload.Json);
         }
         
-        public Message(object data)
+        public Message(NodeInfo nodeInfo, string key, Payload payload, string replyKey)
         {
-            Json = JsonConvert.SerializeObject(data);
+            Info = new MessageInfo
+            {
+                NodeInfo = nodeInfo,
+                Key = key, 
+                ReplyKey = replyKey
+            };
+            Payload = payload;
+        }
+
+        internal Message(MessageInfo info, Payload payload)
+        {
+            Info = info;
+            Payload = payload;
         }
     }
-    
 }

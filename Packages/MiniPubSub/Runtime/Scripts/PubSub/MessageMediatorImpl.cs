@@ -50,20 +50,20 @@ namespace MiniSDK.PubSub
             instantReceiverDic[receiver.Key] = receiver;
         }
 
-        public void Broadcast(Request request)
+        public void Broadcast(Message message)
         {
-            if (instantReceiverDic.TryRemove(request.Key, out var instantReceiver))
+            if (instantReceiverDic.TryRemove(message.Key, out var instantReceiver))
             {
-                instantReceiver.ReceiverDelegate?.Invoke(request);
+                instantReceiver.ReceiverDelegate?.Invoke(message);
             }
             
-            if (receiverDic.TryGetValue(request.Key, out var receivers))
+            if (receiverDic.TryGetValue(message.Key, out var receivers))
             {
                 foreach (var receiver in receivers)
                 {
-                    if(receiver.NodeId == request.Info.NodeInfo.PublisherId) 
+                    if(receiver.NodeId == message.Info.NodeInfo.PublisherId) 
                         continue;
-                    receiver.ReceiverDelegate?.Invoke(request);
+                    receiver.ReceiverDelegate?.Invoke(message);
                 }
             }
 
@@ -71,9 +71,9 @@ namespace MiniSDK.PubSub
             {
                 foreach (var watcher in watchers)
                 {
-                    if(watcher.NodeId == request.Info.NodeInfo.PublisherId) 
+                    if(watcher.NodeId == message.Info.NodeInfo.PublisherId) 
                         continue;
-                    watcher.ReceiverDelegate?.Invoke(request);
+                    watcher.ReceiverDelegate?.Invoke(message);
                 }
             }
         }

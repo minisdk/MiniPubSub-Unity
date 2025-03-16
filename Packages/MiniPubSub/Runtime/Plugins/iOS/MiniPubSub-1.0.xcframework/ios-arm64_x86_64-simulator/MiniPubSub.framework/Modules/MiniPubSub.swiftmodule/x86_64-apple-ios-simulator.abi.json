@@ -352,8 +352,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "RequestInfo",
-        "printedName": "RequestInfo",
+        "name": "MessageInfo",
+        "printedName": "MessageInfo",
         "children": [
           {
             "kind": "Constructor",
@@ -362,9 +362,9 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RequestInfo",
-                "printedName": "MiniPubSub.RequestInfo",
-                "usr": "s:10MiniPubSub11RequestInfoV"
+                "name": "MessageInfo",
+                "printedName": "MiniPubSub.MessageInfo",
+                "usr": "s:10MiniPubSub11MessageInfoV"
               },
               {
                 "kind": "TypeNominal",
@@ -374,8 +374,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10MiniPubSub11RequestInfoV4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s10MiniPubSub11RequestInfoV4fromACs7Decoder_p_tKcfc",
+            "usr": "s:10MiniPubSub11MessageInfoV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10MiniPubSub11MessageInfoV4fromACs7Decoder_p_tKcfc",
             "moduleName": "MiniPubSub",
             "implicit": true,
             "throwing": true,
@@ -399,8 +399,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub11RequestInfoV6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s10MiniPubSub11RequestInfoV6encode2toys7Encoder_p_tKF",
+            "usr": "s:10MiniPubSub11MessageInfoV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10MiniPubSub11MessageInfoV6encode2toys7Encoder_p_tKF",
             "moduleName": "MiniPubSub",
             "implicit": true,
             "throwing": true,
@@ -408,8 +408,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:10MiniPubSub11RequestInfoV",
-        "mangledName": "$s10MiniPubSub11RequestInfoV",
+        "usr": "s:10MiniPubSub11MessageInfoV",
+        "mangledName": "$s10MiniPubSub11MessageInfoV",
         "moduleName": "MiniPubSub",
         "declAttributes": [
           "AccessControl"
@@ -433,20 +433,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ResponseInfo",
-        "printedName": "ResponseInfo",
-        "declKind": "Struct",
-        "usr": "s:10MiniPubSub12ResponseInfoV",
-        "mangledName": "$s10MiniPubSub12ResponseInfoV",
-        "moduleName": "MiniPubSub",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "Request",
-        "printedName": "Request",
+        "name": "Message",
+        "printedName": "Message",
         "children": [
           {
             "kind": "Var",
@@ -455,14 +443,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RequestInfo",
-                "printedName": "MiniPubSub.RequestInfo",
-                "usr": "s:10MiniPubSub11RequestInfoV"
+                "name": "MessageInfo",
+                "printedName": "MiniPubSub.MessageInfo",
+                "usr": "s:10MiniPubSub11MessageInfoV"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10MiniPubSub7RequestV4infoAA0D4InfoVvp",
-            "mangledName": "$s10MiniPubSub7RequestV4infoAA0D4InfoVvp",
+            "usr": "s:10MiniPubSub7MessageV4infoAA0D4InfoVvp",
+            "mangledName": "$s10MiniPubSub7MessageV4infoAA0D4InfoVvp",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "HasStorage",
@@ -478,14 +466,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RequestInfo",
-                    "printedName": "MiniPubSub.RequestInfo",
-                    "usr": "s:10MiniPubSub11RequestInfoV"
+                    "name": "MessageInfo",
+                    "printedName": "MiniPubSub.MessageInfo",
+                    "usr": "s:10MiniPubSub11MessageInfoV"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10MiniPubSub7RequestV4infoAA0D4InfoVvg",
-                "mangledName": "$s10MiniPubSub7RequestV4infoAA0D4InfoVvg",
+                "usr": "s:10MiniPubSub7MessageV4infoAA0D4InfoVvg",
+                "mangledName": "$s10MiniPubSub7MessageV4infoAA0D4InfoVvg",
                 "moduleName": "MiniPubSub",
                 "implicit": true,
                 "accessorKind": "get"
@@ -494,19 +482,19 @@
           },
           {
             "kind": "Var",
-            "name": "json",
-            "printedName": "json",
+            "name": "payload",
+            "printedName": "payload",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
               }
             ],
             "declKind": "Var",
-            "usr": "s:10MiniPubSub7RequestV4jsonSSvp",
-            "mangledName": "$s10MiniPubSub7RequestV4jsonSSvp",
+            "usr": "s:10MiniPubSub7MessageV7payloadAA7PayloadCvp",
+            "mangledName": "$s10MiniPubSub7MessageV7payloadAA7PayloadCvp",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "HasStorage",
@@ -522,14 +510,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Payload",
+                    "printedName": "MiniPubSub.Payload",
+                    "usr": "s:10MiniPubSub7PayloadC"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10MiniPubSub7RequestV4jsonSSvg",
-                "mangledName": "$s10MiniPubSub7RequestV4jsonSSvg",
+                "usr": "s:10MiniPubSub7MessageV7payloadAA7PayloadCvg",
+                "mangledName": "$s10MiniPubSub7MessageV7payloadAA7PayloadCvg",
                 "moduleName": "MiniPubSub",
                 "implicit": true,
                 "accessorKind": "get"
@@ -549,8 +537,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10MiniPubSub7RequestV3keySSvp",
-            "mangledName": "$s10MiniPubSub7RequestV3keySSvp",
+            "usr": "s:10MiniPubSub7MessageV3keySSvp",
+            "mangledName": "$s10MiniPubSub7MessageV3keySSvp",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "AccessControl"
@@ -569,8 +557,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10MiniPubSub7RequestV3keySSvg",
-                "mangledName": "$s10MiniPubSub7RequestV3keySSvg",
+                "usr": "s:10MiniPubSub7MessageV3keySSvg",
+                "mangledName": "$s10MiniPubSub7MessageV3keySSvg",
                 "moduleName": "MiniPubSub",
                 "accessorKind": "get"
               }
@@ -596,8 +584,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub7RequestV4dataxSgySeRzSERzlF",
-            "mangledName": "$s10MiniPubSub7RequestV4dataxSgySeRzSERzlF",
+            "usr": "s:10MiniPubSub7MessageV4dataxSgySeRzSERzlF",
+            "mangledName": "$s10MiniPubSub7MessageV4dataxSgySeRzSERzlF",
             "moduleName": "MiniPubSub",
             "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
             "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
@@ -605,32 +593,11 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getResponseInfo",
-            "printedName": "getResponseInfo()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "ResponseInfo",
-                "printedName": "MiniPubSub.ResponseInfo",
-                "usr": "s:10MiniPubSub12ResponseInfoV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10MiniPubSub7RequestV15getResponseInfoAA0fG0VyF",
-            "mangledName": "$s10MiniPubSub7RequestV15getResponseInfoAA0fG0VyF",
-            "moduleName": "MiniPubSub",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
-        "usr": "s:10MiniPubSub7RequestV",
-        "mangledName": "$s10MiniPubSub7RequestV",
+        "usr": "s:10MiniPubSub7MessageV",
+        "mangledName": "$s10MiniPubSub7MessageV",
         "moduleName": "MiniPubSub",
         "declAttributes": [
           "AccessControl"
@@ -687,7 +654,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(MiniPubSub.Request) -> ()",
+                "printedName": "(MiniPubSub.Message) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -696,16 +663,16 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Request",
-                    "printedName": "MiniPubSub.Request",
-                    "usr": "s:10MiniPubSub7RequestV"
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub7WatcherC5watch8delegateyyAA7RequestVc_tF",
-            "mangledName": "$s10MiniPubSub7WatcherC5watch8delegateyyAA7RequestVc_tF",
+            "usr": "s:10MiniPubSub7WatcherC5watch8delegateyyAA7MessageVc_tF",
+            "mangledName": "$s10MiniPubSub7WatcherC5watch8delegateyyAA7MessageVc_tF",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "AccessControl"
@@ -813,7 +780,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(MiniPubSub.Request) -> ()",
+                "printedName": "(MiniPubSub.Message) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -822,16 +789,16 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Request",
-                    "printedName": "MiniPubSub.Request",
-                    "usr": "s:10MiniPubSub7RequestV"
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub9MessengerC9subscribe3key8delegateySS_yAA7RequestVctF",
-            "mangledName": "$s10MiniPubSub9MessengerC9subscribe3key8delegateySS_yAA7RequestVctF",
+            "usr": "s:10MiniPubSub9MessengerC9subscribe3key8delegateySS_yAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9MessengerC9subscribe3key8delegateySS_yAA7MessageVctF",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "Final",
@@ -1159,8 +1126,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "Message",
-        "printedName": "Message",
+        "name": "Payload",
+        "printedName": "Payload",
         "children": [
           {
             "kind": "Var",
@@ -1175,8 +1142,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:10MiniPubSub7MessageC4jsonSSvp",
-            "mangledName": "$s10MiniPubSub7MessageC4jsonSSvp",
+            "usr": "s:10MiniPubSub7PayloadC4jsonSSvp",
+            "mangledName": "$s10MiniPubSub7PayloadC4jsonSSvp",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "Final",
@@ -1199,8 +1166,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:10MiniPubSub7MessageC4jsonSSvg",
-                "mangledName": "$s10MiniPubSub7MessageC4jsonSSvg",
+                "usr": "s:10MiniPubSub7PayloadC4jsonSSvg",
+                "mangledName": "$s10MiniPubSub7PayloadC4jsonSSvg",
                 "moduleName": "MiniPubSub",
                 "implicit": true,
                 "declAttributes": [
@@ -1213,13 +1180,41 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(json:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub7PayloadC4jsonACSS_tcfc",
+            "mangledName": "$s10MiniPubSub7PayloadC4jsonACSS_tcfc",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(data:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Message",
-                "printedName": "MiniPubSub.Message",
-                "usr": "s:10MiniPubSub7MessageC"
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
               },
               {
                 "kind": "TypeNominal",
@@ -1228,14 +1223,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10MiniPubSub7MessageC4dataACx_tcSeRzSERzlufc",
-            "mangledName": "$s10MiniPubSub7MessageC4dataACx_tcSeRzSERzlufc",
+            "usr": "s:10MiniPubSub7PayloadC4dataACx_tcSeRzSERzlufc",
+            "mangledName": "$s10MiniPubSub7PayloadC4dataACx_tcSeRzSERzlufc",
             "moduleName": "MiniPubSub",
             "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
             "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
             "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "init_kind": "Designated"
           },
@@ -1259,8 +1253,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub7MessageC4dataxSgySeRzSERzlF",
-            "mangledName": "$s10MiniPubSub7MessageC4dataxSgySeRzSERzlF",
+            "usr": "s:10MiniPubSub7PayloadC4dataxSgySeRzSERzlF",
+            "mangledName": "$s10MiniPubSub7PayloadC4dataxSgySeRzSERzlF",
             "moduleName": "MiniPubSub",
             "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
             "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
@@ -1271,8 +1265,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:10MiniPubSub7MessageC",
-        "mangledName": "$s10MiniPubSub7MessageC",
+        "usr": "s:10MiniPubSub7PayloadC",
+        "mangledName": "$s10MiniPubSub7PayloadC",
         "moduleName": "MiniPubSub",
         "declAttributes": [
           "AccessControl"
@@ -1296,7 +1290,7 @@
           {
             "kind": "Function",
             "name": "publish",
-            "printedName": "publish(key:message:)",
+            "printedName": "publish(key:payload:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1311,14 +1305,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Message",
-                "printedName": "MiniPubSub.Message",
-                "usr": "s:10MiniPubSub7MessageC"
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub9PublisherC7publish3key7messageySS_AA7MessageCtF",
-            "mangledName": "$s10MiniPubSub9PublisherC7publish3key7messageySS_AA7MessageCtF",
+            "usr": "s:10MiniPubSub9PublisherC7publish3key7payloadySS_AA7PayloadCtF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish3key7payloadySS_AA7PayloadCtF",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "AccessControl"
@@ -1328,7 +1322,7 @@
           {
             "kind": "Function",
             "name": "publish",
-            "printedName": "publish(key:message:responseCallback:)",
+            "printedName": "publish(key:payload:responseCallback:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1343,14 +1337,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Message",
-                "printedName": "MiniPubSub.Message",
-                "usr": "s:10MiniPubSub7MessageC"
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
               },
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(MiniPubSub.Request) -> ()",
+                "printedName": "(MiniPubSub.Message) -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1359,16 +1353,16 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Request",
-                    "printedName": "MiniPubSub.Request",
-                    "usr": "s:10MiniPubSub7RequestV"
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub9PublisherC7publish3key7message16responseCallbackySS_AA7MessageCyAA7RequestVctF",
-            "mangledName": "$s10MiniPubSub9PublisherC7publish3key7message16responseCallbackySS_AA7MessageCyAA7RequestVctF",
+            "usr": "s:10MiniPubSub9PublisherC7publish3key7payload16responseCallbackySS_AA7PayloadCyAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish3key7payload16responseCallbackySS_AA7PayloadCyAA7MessageVctF",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "AccessControl"
@@ -1378,7 +1372,7 @@
           {
             "kind": "Function",
             "name": "respond",
-            "printedName": "respond(responseInfo:message:)",
+            "printedName": "respond(received:payload:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1387,20 +1381,20 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "ResponseInfo",
-                "printedName": "MiniPubSub.ResponseInfo",
-                "usr": "s:10MiniPubSub12ResponseInfoV"
+                "name": "MessageInfo",
+                "printedName": "MiniPubSub.MessageInfo",
+                "usr": "s:10MiniPubSub11MessageInfoV"
               },
               {
                 "kind": "TypeNominal",
-                "name": "Message",
-                "printedName": "MiniPubSub.Message",
-                "usr": "s:10MiniPubSub7MessageC"
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub9PublisherC7respond12responseInfo7messageyAA08ResponseG0V_AA7MessageCtF",
-            "mangledName": "$s10MiniPubSub9PublisherC7respond12responseInfo7messageyAA08ResponseG0V_AA7MessageCtF",
+            "usr": "s:10MiniPubSub9PublisherC7respond8received7payloadyAA11MessageInfoV_AA7PayloadCtF",
+            "mangledName": "$s10MiniPubSub9PublisherC7respond8received7payloadyAA11MessageInfoV_AA7PayloadCtF",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "AccessControl"
@@ -1584,7 +1578,7 @@
       "kind": "StringLiteral",
       "offset": 705,
       "length": 25,
-      "value": "\"Request decode error : \""
+      "value": "\"Message decode error : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
@@ -1601,51 +1595,51 @@
       "value": "\"MiniPubSub.GameRelay\""
     },
     {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/Message.swift",
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/Payload.swift",
       "kind": "StringLiteral",
-      "offset": 419,
+      "offset": 486,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 402,
+      "offset": 397,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 612,
+      "offset": 604,
       "length": 43,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 619,
+      "offset": 611,
       "length": 3,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 654,
+      "offset": 646,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 705,
+      "offset": 697,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 1346,
+      "offset": 1318,
       "length": 2,
       "value": "\"\""
     }

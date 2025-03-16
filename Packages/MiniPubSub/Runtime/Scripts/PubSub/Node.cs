@@ -7,8 +7,9 @@ namespace MiniSDK.PubSub
     public abstract class Node
     {
         #region IdGenerator
-        private static int _nodeIdGen = (int) SdkType.Game;
+
+        private static readonly IdCounter IdCounter = new IdCounter();
         #endregion
-        public int Id { get; } = SdkUtil.IssueID(ref _nodeIdGen);
+        public int Id { get; } = IdCounter.GetNext();
     }    
 }

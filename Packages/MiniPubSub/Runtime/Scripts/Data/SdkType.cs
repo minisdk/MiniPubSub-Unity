@@ -9,12 +9,13 @@ namespace MiniSDK.PubSub.Data
         Game          = 1
     }
 
-    public static class SdkUtil
+    public class IdCounter
     {
-        private static readonly object IssueLock = new object();
-        public static int IssueID(ref int idSource)
+        private readonly object idLock = new object();
+        private int idSource = (int)SdkType.Game;
+        public int GetNext()
         {
-            lock (IssueLock)
+            lock (idLock)
             {
                 int id = idSource;
                 idSource += 2; // number of PlatformTypes

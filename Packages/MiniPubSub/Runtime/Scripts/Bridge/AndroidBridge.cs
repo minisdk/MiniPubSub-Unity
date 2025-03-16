@@ -31,8 +31,12 @@ namespace MiniSDK.Native
 
         public AndroidBridge()
         {
+            // unity activity
+            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+            
             androidBridgeProxy = new AndroidBridgeProxy();
-            androidBridge.Value.Call("initialize", androidBridgeProxy);
+            androidBridge.Value.Call("initialize", currentActivity, androidBridgeProxy);
         }
 
         public void SetNativeCallbackListener(NativeCallback listener)

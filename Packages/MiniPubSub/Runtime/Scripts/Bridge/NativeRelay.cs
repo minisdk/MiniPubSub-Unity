@@ -1,4 +1,3 @@
-using MiniSDK.Core.Module;
 using MiniSDK.PubSub;
 using Newtonsoft.Json;
 using MiniSDK.PubSub.Data;
@@ -6,14 +5,13 @@ using UnityEngine;
 
 namespace MiniSDK.Native
 {
-    public class NativeRelay : ModuleBase
+    public class NativeRelay
     {
         private INativeBridge bridge;
         private Watcher watcher;
 
-        public override void Initialize()
+        public void Initialize()
         {
-            base.Initialize();
             watcher = new Watcher();
             watcher.Watch(OnWatch);
             bridge = new NativeBridge();
@@ -22,25 +20,25 @@ namespace MiniSDK.Native
 
         private void OnReceiveFromNative(string info, string json)
         {
-            RequestInfo requestInfo = JsonConvert.DeserializeObject<RequestInfo>(info);
-            NodeInfo nodeInfo = new NodeInfo { RequestOwnerId = requestInfo.NodeInfo.RequestOwnerId, PublisherId = watcher.Id };
-            Request request = new Request
+            MessageInfo messageInfo = JsonConvert.DeserializeObject<MessageInfo>(info);
+            NodeInfo nodeInfo = new NodeInfo { MessageOwnerId = messageInfo.NodeInfo.MessageOwnerId, PublisherId = watcher.Id };
+            Message message = new Message
             (
-                new RequestInfo
+                new MessageInfo
                 {
                     NodeInfo = nodeInfo,
-                    Key = requestInfo.Key,
-                    ResponseKey = requestInfo.ResponseKey
+                    Key = messageInfo.Key,
+                    ReplyKey = messageInfo.ReplyKey
                 },
-                json
+                new Payload(json)
             );
-            MessageManager.Instance.Mediator.Broadcast(request);
+            MessageManager.Instance.Mediator.Broadcast(message);
         }
 
-        private void OnWatch(Request request)
+        private void OnWatch(Message message)
         {
-            string info = JsonConvert.SerializeObject(request.Info);
-            bridge.Send(info, request.Json);
+            string info = JsonConvert.SerializeObject(message.Info);
+            bridge.Send(info, message.Payload.Json);
         }
 
     }

@@ -197,7 +197,7 @@
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
       "offset": 646,
-      "length": 61,
+      "length": 69,
       "value": "\"[pubsubtest] key : \""
     },
     {
@@ -210,84 +210,84 @@
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 706,
+      "offset": 714,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1064,
+      "offset": 1072,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 1155,
+      "offset": 1163,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "IntegerLiteral",
-      "offset": 1230,
+      "offset": 1238,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1346,
+      "offset": 1354,
       "length": 19,
       "value": "\"SEND_TOAST_RESULT\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1465,
+      "offset": 1473,
       "length": 18,
       "value": "\"SEND_TOAST_ASYNC\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1516,
-      "length": 61,
+      "offset": 1524,
+      "length": 69,
       "value": "\"[pubsubtest] key : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1550,
+      "offset": 1558,
       "length": 7,
       "value": "\" message : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1576,
+      "offset": 1592,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1934,
+      "offset": 1950,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 2025,
+      "offset": 2041,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "IntegerLiteral",
-      "offset": 2100,
+      "offset": 2116,
       "length": 1,
       "value": "1"
     }

@@ -1,4 +1,3 @@
-using System.Threading;
 using MiniSDK.PubSub.Data;
 
 namespace MiniSDK.PubSub
@@ -7,34 +6,31 @@ namespace MiniSDK.PubSub
     {
         private static readonly IdCounter IdCounter = new IdCounter();
         
-        public void Publish(string key, Payload payload)
+        public void Publish(Topic topic, Payload payload)
         {
             NodeInfo nodeInfo = new NodeInfo() { MessageOwnerId = Id, PublisherId = Id };
-            Message message = new Message(nodeInfo, key, payload, "");
+            Message message = new Message(nodeInfo, topic, Topic.Default, payload);
             MessageManager.Instance.Mediator.Broadcast(message);
         }
 
-        public void Publish(string key, Payload payload, ReceiveDelegate responseCallback)
+        public void Publish(Topic topic, Payload payload, ReceiveDelegate responseCallback)
         {
-            // Create replyKey
-            string replyKey = $"{key}_id{IdCounter.GetNext()}";
+            // Create reply topic
+            string replyKey = $"{topic.Key}_id{IdCounter.GetNext()}";
+            Topic replyTopic = new Topic { Key = replyKey, Target = SdkType.Game };
             // Register instant receiver
-            Receiver receiver = new Receiver(-1, replyKey, responseCallback);
+            Receiver receiver = new Receiver(-1, replyTopic.Key, replyTopic.Target, responseCallback);
             MessageManager.Instance.Mediator.RegisterInstantReceiver(receiver);
+            
             // Broadcast message
             NodeInfo nodeInfo = new NodeInfo() { MessageOwnerId = Id, PublisherId = Id };
-            Message message = new Message(nodeInfo, key, payload, replyKey);
+            Message message = new Message(nodeInfo, topic, replyTopic, payload);
             MessageManager.Instance.Mediator.Broadcast(message);
         }
 
         public void Reply(MessageInfo receivedMessageInfo, Payload payload)
         {
-            Message message = new Message(new NodeInfo
-            {
-                PublisherId = Id,
-                MessageOwnerId = Id
-            }, receivedMessageInfo.ReplyKey, payload, "");
-            MessageManager.Instance.Mediator.Broadcast(message);
+            this.Publish(receivedMessageInfo.ReplyTopic, payload);
         }
     }
     

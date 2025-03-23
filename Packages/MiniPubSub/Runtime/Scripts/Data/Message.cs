@@ -15,32 +15,32 @@ namespace MiniSDK.PubSub.Data
     {
         [JsonProperty(PropertyName = "nodeInfo")]
         public NodeInfo NodeInfo;
-        [JsonProperty(PropertyName = "key")]
-        public string Key;
-        [JsonProperty(PropertyName = "replyKey")]
-        public string ReplyKey;
+        [JsonProperty(PropertyName = "topic")]
+        public Topic Topic;
+        [JsonProperty(PropertyName = "replyTopic")]
+        public Topic ReplyTopic;
     }
     
     public struct Message
     {
         public MessageInfo Info;
-        public Payload Payload;
+        public readonly Payload Payload;
 
         [JsonIgnore]
-        public string Key => Info.Key;
+        public string Key => Info.Topic.Key;
         
         public T Data<T>()
         {
             return JsonConvert.DeserializeObject<T>(Payload.Json);
         }
         
-        public Message(NodeInfo nodeInfo, string key, Payload payload, string replyKey)
+        public Message(NodeInfo nodeInfo, Topic topic, Topic replyTopic, Payload payload)
         {
             Info = new MessageInfo
             {
                 NodeInfo = nodeInfo,
-                Key = key, 
-                ReplyKey = replyKey
+                Topic = topic, 
+                ReplyTopic = replyTopic
             };
             Payload = payload;
         }

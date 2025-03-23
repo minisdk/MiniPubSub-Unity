@@ -7,7 +7,7 @@ import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public enum SdkType : Swift.Int {
+public enum SdkType : Swift.Int, Swift.Codable {
   case native
   case game
   public init?(rawValue: Swift.Int)
@@ -19,6 +19,13 @@ public enum SdkType : Swift.Int {
 @_hasMissingDesignatedInitializers public class IdConuter {
   public func getNext() -> Swift.Int
   @objc deinit
+}
+public struct Topic : Swift.Codable {
+  public let key: Swift.String
+  public let target: MiniPubSub.SdkType
+  public init(key: Swift.String, target: MiniPubSub.SdkType)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct NodeInfo : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -36,14 +43,14 @@ public struct Message {
   }
   public func data<T>() -> T? where T : Swift.Decodable, T : Swift.Encodable
 }
-@_inheritsConvenienceInitializers public class Watcher : MiniPubSub.Node {
-  public init()
+@_hasMissingDesignatedInitializers public class Watcher : MiniPubSub.Node {
+  public init(target: MiniPubSub.SdkType = .native)
   public func watch(delegate: @escaping MiniPubSub.ReceiverDelegate)
   public func unwatch()
   @objc deinit
 }
-@_inheritsConvenienceInitializers final public class Messenger : MiniPubSub.Publisher {
-  public init()
+@_hasMissingDesignatedInitializers final public class Messenger : MiniPubSub.Publisher {
+  public init(target: MiniPubSub.SdkType = .native)
   final public func subscribe(key: Swift.String, delegate: @escaping MiniPubSub.ReceiverDelegate)
   final public func unsubscribe(key: Swift.String)
   @objc deinit
@@ -68,9 +75,9 @@ public class Payload {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Publisher : MiniPubSub.Node {
-  public func publish(key: Swift.String, payload: MiniPubSub.Payload)
-  public func publish(key: Swift.String, payload: MiniPubSub.Payload, responseCallback: @escaping MiniPubSub.ReceiverDelegate)
-  public func respond(received: MiniPubSub.MessageInfo, payload: MiniPubSub.Payload)
+  public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload)
+  public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload, responseCallback: @escaping MiniPubSub.ReceiverDelegate)
+  public func reply(received: MiniPubSub.MessageInfo, payload: MiniPubSub.Payload)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class MessageManager {

@@ -5,7 +5,7 @@ namespace MiniSDK.PubSub.Data
 {
     public class Payload
     {
-        public string Json;
+        public readonly string Json;
         
         public T Data<T>()
         {

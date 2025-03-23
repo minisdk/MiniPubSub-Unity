@@ -61,9 +61,10 @@ namespace MiniSDK.PubSub
             {
                 foreach (var receiver in receivers)
                 {
-                    if(receiver.NodeId == message.Info.NodeInfo.PublisherId) 
-                        continue;
-                    receiver.ReceiverDelegate?.Invoke(message);
+                    if (receiver.CanInvoke(message.Info))
+                    {
+                        receiver.ReceiverDelegate?.Invoke(message);
+                    }
                 }
             }
 
@@ -71,7 +72,7 @@ namespace MiniSDK.PubSub
             {
                 foreach (var watcher in watchers)
                 {
-                    if(watcher.NodeId == message.Info.NodeInfo.PublisherId) 
+                    if(watcher.CanInvoke(message.Info)) 
                         continue;
                     watcher.ReceiverDelegate?.Invoke(message);
                 }

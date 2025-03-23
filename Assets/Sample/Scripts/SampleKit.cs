@@ -52,14 +52,14 @@ public class SampleKit
 
     public void CallTest()
     {
-        messenger.Publish("SEND_TOAST", new Payload(new ToastData{ToastDuration = 1, ToastMessage = "toast of unity"}));
+        messenger.Publish(new Topic{Key = "SEND_TOAST", Target = SdkType.Native}, new Payload(new ToastData{ToastDuration = 1, ToastMessage = "toast of unity"}));
     }
 
     public void AsyncCallTest()
     {
         Payload payload = new Payload(
             new ToastData { ToastDuration = 1, ToastMessage = "[unity] toast async call" });
-        messenger.Publish("SEND_TOAST_ASYNC", payload, receivedMessage =>
+        messenger.Publish(new Topic{Key = "SEND_TOAST_ASYNC", Target = SdkType.Native}, payload, receivedMessage =>
         {
             Debug.Log("[unity pubsubtest] received async payload toast count :  + " + receivedMessage.Data<ToastResult>().ToastCount);
         });

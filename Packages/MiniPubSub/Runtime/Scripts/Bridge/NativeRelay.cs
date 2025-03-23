@@ -27,8 +27,8 @@ namespace MiniSDK.Native
                 new MessageInfo
                 {
                     NodeInfo = nodeInfo,
-                    Key = messageInfo.Key,
-                    ReplyKey = messageInfo.ReplyKey
+                    Topic = messageInfo.Topic,
+                    ReplyTopic = messageInfo.ReplyTopic
                 },
                 new Payload(json)
             );

@@ -5,8 +5,9 @@ namespace MiniSDK.Native
     
     public interface INativeBridge
     {
-        void SetNativeCallbackListener(NativeCallback listener);
+        void InitNative(NativeCallback listener);
         void Send(string info, string json);
+        string SendSync(string info, string json);
     }
 }
 

@@ -64,4 +64,11 @@ public class SampleKit
             Debug.Log("[unity pubsubtest] received async payload toast count :  + " + receivedMessage.Data<ToastResult>().ToastCount);
         });
     }
+
+    public void SyncCallTest()
+    {
+        Payload payload = new Payload(new ToastData { ToastDuration = 5, ToastMessage = "[unity] toast sync call" });
+        Payload result = messenger.SendSync(new Topic { Key = "SEND_TOAST_SYNC", Target = SdkType.Native }, payload);
+        Debug.Log("[unity pubsubtest] sync result : " + result.Json);
+    }
 }

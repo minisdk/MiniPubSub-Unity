@@ -39,7 +39,7 @@ namespace MiniSDK.Native
             androidBridge.Value.Call("initialize", currentActivity, androidBridgeProxy);
         }
 
-        public void SetNativeCallbackListener(NativeCallback listener)
+        public void InitNative(NativeCallback listener)
         {
             androidBridgeProxy.NativeCallback -= listener;
             androidBridgeProxy.NativeCallback += listener;
@@ -48,6 +48,11 @@ namespace MiniSDK.Native
         public void Send(string info, string json)
         {
             androidBridge.Value.Call("send", info, json);
+        }
+
+        public string SendSync(string info, string json)
+        {
+            return androidBridge.Value.Call<string>("sendSync", info, json);
         }
     }
     

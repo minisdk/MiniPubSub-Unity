@@ -1,8 +1,6 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using MiniSDK.PubSub.Data;
-using Newtonsoft.Json;
-using UnityEngine;
 
 namespace MiniSDK.PubSub
 {
@@ -11,6 +9,8 @@ namespace MiniSDK.PubSub
         private static string WatcherKey => "Key_Watcher_Reserved";
         private readonly ConcurrentDictionary<string, List<Receiver>> receiverDic = new ConcurrentDictionary<string, List<Receiver>>();
         private readonly ConcurrentDictionary<string, Receiver> instantReceiverDic = new ConcurrentDictionary<string, Receiver>();
+        private readonly ConcurrentDictionary<string, Handler> handlerDic = new ConcurrentDictionary<string, Handler>();
+        private readonly ConcurrentDictionary<SdkType, Handler> targetHandlerDic = new ConcurrentDictionary<SdkType, Handler>();
         
         public void Register(string key, Receiver receiver)
         {
@@ -72,12 +72,45 @@ namespace MiniSDK.PubSub
             {
                 foreach (var watcher in watchers)
                 {
-                    if(watcher.CanInvoke(message.Info)) 
-                        continue;
-                    watcher.ReceiverDelegate?.Invoke(message);
+                    if (watcher.CanInvoke(message.Info))
+                    {
+                        watcher.ReceiverDelegate?.Invoke(message);
+                    }
                 }
             }
         }
 
+        public void Handle(Handler handler)
+        {
+            handlerDic[handler.Key] = handler;
+        }
+
+        public void HandleTarget(Handler handler)
+        {
+            targetHandlerDic[handler.Target] = handler;
+        }
+
+        public Payload SendSync(Message message)
+        {
+            if (handlerDic.TryGetValue(message.Key, out Handler handler))
+            {
+                if (handler.CanInvoke(message.Info))
+                {
+                    return handler.HandleDelegate?.Invoke(message);
+                }
+                return new Payload("{}");
+            }
+
+            if (targetHandlerDic.TryGetValue(message.Info.Topic.Target, out handler))
+            {
+                if (handler.CanInvoke(message.Info))
+                {
+                    return handler.HandleDelegate?.Invoke(message);
+                }
+                return new Payload("{}");
+            }
+
+            return new Payload("{}");
+        }
     }
 }

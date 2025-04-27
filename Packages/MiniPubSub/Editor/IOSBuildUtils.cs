@@ -1,3 +1,4 @@
+#if UNITY_IOS && UNITY_EDITOR
 using System.IO;
 using UnityEditor.iOS.Xcode;
 
@@ -20,3 +21,4 @@ namespace MiniPubSub.Editor
         }
     }
 }
+#endif

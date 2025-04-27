@@ -14,8 +14,12 @@ namespace MiniSDK.Native
         {
             watcher = new Watcher();
             watcher.Watch(OnWatch);
+
+            Handler handler = new Handler(watcher.Id, "", SdkType.Native, OnHandle);
+            MessageManager.Instance.Mediator.Handle(handler);
+            
             bridge = new NativeBridge();
-            bridge.SetNativeCallbackListener(OnReceiveFromNative);
+            bridge.InitNative(OnReceiveFromNative);
         }
 
         private void OnReceiveFromNative(string info, string json)
@@ -33,6 +37,13 @@ namespace MiniSDK.Native
                 new Payload(json)
             );
             MessageManager.Instance.Mediator.Broadcast(message);
+        }
+
+        private Payload OnHandle(Message message)
+        {
+            string info = JsonConvert.SerializeObject(message.Info);
+            string result = bridge.SendSync(info, message.Payload.Json);
+            return new Payload(result);
         }
 
         private void OnWatch(Message message)

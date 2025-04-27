@@ -32,6 +32,13 @@ namespace MiniSDK.PubSub
         {
             this.Publish(receivedMessageInfo.ReplyTopic, payload);
         }
+
+        public Payload SendSync(Topic topic, Payload payload)
+        {
+            NodeInfo nodeInfo = new NodeInfo { MessageOwnerId = Id, PublisherId = Id };
+            Message message = new Message(nodeInfo, topic, Topic.Default, payload);
+            return MessageManager.Instance.Mediator.SendSync(message);
+        }
     }
     
 }

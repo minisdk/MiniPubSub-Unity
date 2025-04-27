@@ -5,7 +5,7 @@ namespace MiniSDK.Native
     {
         private NativeCallback callback;
         
-        public void SetNativeCallbackListener(NativeCallback listener)
+        public void InitNative(NativeCallback listener)
         {
             callback += listener;
             callback -= listener;
@@ -14,6 +14,11 @@ namespace MiniSDK.Native
         public void Send(string info, string json)
         {
             callback?.Invoke(info, json);
+        }
+
+        public string SendSync(string info, string json)
+        {
+            return "";
         }
     }
 }

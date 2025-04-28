@@ -27,6 +27,7 @@ public struct Topic : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public typealias HandleDelegate = (MiniPubSub.Message) -> MiniPubSub.Payload
 public struct NodeInfo : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -45,17 +46,18 @@ public struct Message {
 }
 @_hasMissingDesignatedInitializers public class Watcher : MiniPubSub.Node {
   public init(target: MiniPubSub.SdkType = .native)
-  public func watch(delegate: @escaping MiniPubSub.ReceiverDelegate)
+  public func watch(delegate: @escaping MiniPubSub.ReceiveDelegate)
   public func unwatch()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class Messenger : MiniPubSub.Publisher {
   public init(target: MiniPubSub.SdkType = .native)
-  final public func subscribe(key: Swift.String, delegate: @escaping MiniPubSub.ReceiverDelegate)
+  final public func subscribe(key: Swift.String, delegate: @escaping MiniPubSub.ReceiveDelegate)
   final public func unsubscribe(key: Swift.String)
+  final public func handle(key: Swift.String, delegate: @escaping MiniPubSub.HandleDelegate)
   @objc deinit
 }
-public typealias ReceiverDelegate = (MiniPubSub.Message) -> ()
+public typealias ReceiveDelegate = (MiniPubSub.Message) -> ()
 @_hasMissingDesignatedInitializers public class Node {
   @objc deinit
 }
@@ -65,6 +67,7 @@ public typealias ReceiverDelegate = (MiniPubSub.Message) -> ()
 @objc public class GameRelay : ObjectiveC.NSObject {
   @objc public init(callback: any MiniPubSub.SwiftCallback)
   @objc public func send(info: Swift.String, data: Swift.String)
+  @objc public func sendSync(info: Swift.String, data: Swift.String) -> Swift.String
   @objc deinit
 }
 public class Payload {
@@ -76,8 +79,9 @@ public class Payload {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Publisher : MiniPubSub.Node {
   public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload)
-  public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload, responseCallback: @escaping MiniPubSub.ReceiverDelegate)
+  public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload, responseCallback: @escaping MiniPubSub.ReceiveDelegate)
   public func reply(received: MiniPubSub.MessageInfo, payload: MiniPubSub.Payload)
+  public func sendSync(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload) -> MiniPubSub.Payload
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class MessageManager {

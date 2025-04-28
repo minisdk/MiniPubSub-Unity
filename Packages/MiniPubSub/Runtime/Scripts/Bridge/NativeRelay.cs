@@ -12,11 +12,11 @@ namespace MiniSDK.Native
 
         public void Initialize()
         {
-            watcher = new Watcher();
+            watcher = new Watcher(SdkType.Native);
             watcher.Watch(OnWatch);
 
             Handler handler = new Handler(watcher.Id, "", SdkType.Native, OnHandle);
-            MessageManager.Instance.Mediator.Handle(handler);
+            MessageManager.Instance.Mediator.Handle(handler.Target, handler);
             
             bridge = new NativeBridge();
             bridge.InitNative(OnReceiveFromNative);

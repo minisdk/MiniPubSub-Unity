@@ -305,6 +305,7 @@ SWIFT_CLASS("_TtC10MiniPubSub9GameRelay")
 @interface GameRelay : NSObject
 - (nonnull instancetype)initWithCallback:(id <SwiftCallback> _Nonnull)callback OBJC_DESIGNATED_INITIALIZER;
 - (void)sendWithInfo:(NSString * _Nonnull)info data:(NSString * _Nonnull)data;
+- (NSString * _Nonnull)sendSyncWithInfo:(NSString * _Nonnull)info data:(NSString * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

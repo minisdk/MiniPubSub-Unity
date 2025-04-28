@@ -23,7 +23,7 @@ namespace MiniSDK.PubSub
         public void Handle(string key , HandleDelegate handleDelegate)
         {
             Handler handler = new Handler(this.Id, key, target, handleDelegate);
-            MessageManager.Instance.Mediator.Handle(handler);
+            MessageManager.Instance.Mediator.Handle(handler.Key, handler);
         }
 
         public void Unsubscribe(string key)

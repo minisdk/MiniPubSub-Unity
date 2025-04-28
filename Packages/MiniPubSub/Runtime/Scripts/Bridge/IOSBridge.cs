@@ -22,7 +22,9 @@ namespace MiniSDK.Native
         private static extern void __iOSSend(string info, string data);
 
         [DllImport("__Internal")]
-        private static extern string __iOSSendSync(string info, string data);
+        private static extern IntPtr __iOSSendSync(string info, string data);
+        [DllImport("__Internal")]
+        private static extern void __iOSFreeCString(IntPtr ptr); 
 
         public IOSBridge()
         {
@@ -42,7 +44,10 @@ namespace MiniSDK.Native
 
         public string SendSync(string info, string json)
         {
-            return __iOSSendSync(info, json);
+            IntPtr ptr = __iOSSendSync(info, json);
+            string result = Marshal.PtrToStringAnsi(ptr);
+            __iOSFreeCString(ptr);
+            return result;
         }
     }
 }

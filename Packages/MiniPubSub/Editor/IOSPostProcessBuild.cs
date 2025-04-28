@@ -25,14 +25,6 @@ namespace MiniPubSub.Editor
                 pbxProject.AddStaticFramework(pathToBuiltProject, "Packages/MiniPubSub/Runtime/Plugins/iOS", "MiniPubSub-1.0.xcframework");
 
                 // enable swift runtime
-                string swiftDummyFile = "Dummy.swift";
-                string swiftDummyPath = Path.Combine(pathToBuiltProject, swiftDummyFile);
-                if (!File.Exists(swiftDummyPath))
-                {
-                    File.WriteAllText(swiftDummyPath, "// Dummy Swift file to enable Swift runtime\n");
-                    string fileGuid = pbxProject.AddFile(swiftDummyFile, swiftDummyFile);
-                    pbxProject.AddFileToBuild(unityFrameworkTargetGuid, fileGuid);
-                }
                 pbxProject.SetBuildProperty(unityFrameworkTargetGuid, "SWIFT_VERSION", "5.0");
                 pbxProject.SetBuildProperty(unityFrameworkTargetGuid, "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES", "YES");
                 

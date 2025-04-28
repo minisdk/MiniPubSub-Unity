@@ -486,6 +486,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "NodeInfo",
         "printedName": "NodeInfo",
@@ -1058,6 +1068,52 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handle",
+            "printedName": "handle(key:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.Message) -> MiniPubSub.Payload",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Payload",
+                    "printedName": "MiniPubSub.Payload",
+                    "usr": "s:10MiniPubSub7PayloadC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9MessengerC6handle3key8delegateySS_AA7PayloadCAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9MessengerC6handle3key8delegateySS_AA7PayloadCAA7MessageVctF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1243,6 +1299,41 @@
             "mangledName": "$s10MiniPubSub9GameRelayC4send4info4dataySS_SStF",
             "moduleName": "MiniPubSub",
             "objc_name": "sendWithInfo:data:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendSync",
+            "printedName": "sendSync(info:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MiniPubSub@objc(cs)GameRelay(im)sendSyncWithInfo:data:",
+            "mangledName": "$s10MiniPubSub9GameRelayC8sendSync4info4dataS2S_SStF",
+            "moduleName": "MiniPubSub",
+            "objc_name": "sendSyncWithInfo:data:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -1626,6 +1717,39 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendSync",
+            "printedName": "sendSync(topic:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC8sendSync5topic7payloadAA7PayloadCAA5TopicV_AHtF",
+            "mangledName": "$s10MiniPubSub9PublisherC8sendSync5topic7payloadAA7PayloadCAA5TopicV_AHtF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1809,28 +1933,77 @@
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
       "kind": "Dictionary",
-      "offset": 360,
+      "offset": 459,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
       "kind": "Dictionary",
-      "offset": 393,
+      "offset": 492,
       "length": 3,
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "Dictionary",
+      "offset": 517,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "Dictionary",
+      "offset": 548,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 2397,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
       "kind": "StringLiteral",
-      "offset": 746,
+      "offset": 656,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 950,
       "length": 25,
       "value": "\"Message decode error : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
       "kind": "StringLiteral",
-      "offset": 1026,
+      "offset": 1261,
+      "length": 25,
+      "value": "\"Message decode error : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 1314,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 1612,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 1768,
       "length": 29,
       "value": "\"MessageInfo encode error : \""
     },
@@ -1851,28 +2024,28 @@
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 623,
+      "offset": 622,
       "length": 49,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 635,
       "length": 3,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 671,
+      "offset": 670,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 792,
+      "offset": 791,
       "length": 2,
       "value": "-1"
     }

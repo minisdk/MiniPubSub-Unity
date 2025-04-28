@@ -80,14 +80,14 @@ namespace MiniSDK.PubSub
             }
         }
 
-        public void Handle(Handler handler)
+        public void Handle(string key, Handler handler)
         {
-            handlerDic[handler.Key] = handler;
+            handlerDic[key] = handler;
         }
 
-        public void HandleTarget(Handler handler)
+        public void Handle(SdkType target, Handler handler)
         {
-            targetHandlerDic[handler.Target] = handler;
+            targetHandlerDic[target] = handler;
         }
 
         public Payload SendSync(Message message)

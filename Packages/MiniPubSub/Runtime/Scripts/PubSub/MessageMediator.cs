@@ -11,8 +11,8 @@ namespace MiniSDK.PubSub
         void Unregister(int id, string key);
         void RegisterInstantReceiver(Receiver receiver);
         void Broadcast(Message message);
-        void Handle(Handler handler);
-        void HandleTarget(Handler handler);
+        void Handle(string key, Handler handler);
+        void Handle(SdkType target, Handler handler);
         Payload SendSync(Message message);
     }
 

@@ -196,98 +196,147 @@
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 646,
-      "length": 69,
-      "value": "\"[pubsubtest] key : \""
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "StringLiteral",
-      "offset": 680,
-      "length": 7,
-      "value": "\" message : \""
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "StringLiteral",
-      "offset": 714,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "StringLiteral",
-      "offset": 1072,
-      "length": 4,
-      "value": "\"ok\""
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1163,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1238,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "StringLiteral",
-      "offset": 1367,
-      "length": 19,
-      "value": "\"SEND_TOAST_RESULT\""
-    },
-    {
-      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
-      "kind": "StringLiteral",
-      "offset": 1509,
+      "offset": 671,
       "length": 18,
       "value": "\"SEND_TOAST_ASYNC\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1560,
+      "offset": 749,
+      "length": 17,
+      "value": "\"SEND_TOAST_SYNC\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 868,
       "length": 69,
       "value": "\"[pubsubtest] key : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1594,
+      "offset": 902,
       "length": 7,
       "value": "\" message : \""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1628,
+      "offset": 936,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "StringLiteral",
-      "offset": 1986,
+      "offset": 1266,
       "length": 4,
       "value": "\"ok\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 2077,
+      "offset": 1353,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
       "kind": "IntegerLiteral",
-      "offset": 2152,
+      "offset": 1420,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 1541,
+      "length": 19,
+      "value": "\"SEND_TOAST_RESULT\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 1705,
+      "length": 69,
+      "value": "\"[pubsubtest] key : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 1739,
+      "length": 7,
+      "value": "\" message : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 1773,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 2103,
+      "length": 4,
+      "value": "\"ok\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2190,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2257,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 2525,
+      "length": 69,
+      "value": "\"[pubsubtest] key : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 2559,
+      "length": 7,
+      "value": "\" message : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 2593,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "StringLiteral",
+      "offset": 2923,
+      "length": 4,
+      "value": "\"ok\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3010,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/sample\/sample\/SampleKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3079,
       "length": 1,
       "value": "1"
     }

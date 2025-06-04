@@ -1607,6 +1607,76 @@
           {
             "kind": "Function",
             "name": "publish",
+            "printedName": "publish(topic:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC7publish5topicyAA5TopicV_tF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish5topicyAA5TopicV_tF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "publish",
+            "printedName": "publish(topic:replyCallback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.Message) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC7publish5topic13replyCallbackyAA5TopicV_yAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish5topic13replyCallbackyAA5TopicV_yAA7MessageVctF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "publish",
             "printedName": "publish(topic:payload:)",
             "children": [
               {
@@ -1639,7 +1709,7 @@
           {
             "kind": "Function",
             "name": "publish",
-            "printedName": "publish(topic:payload:responseCallback:)",
+            "printedName": "publish(topic:payload:replyCallback:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1678,8 +1748,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MiniPubSub9PublisherC7publish5topic7payload16responseCallbackyAA5TopicV_AA7PayloadCyAA7MessageVctF",
-            "mangledName": "$s10MiniPubSub9PublisherC7publish5topic7payload16responseCallbackyAA5TopicV_AA7PayloadCyAA7MessageVctF",
+            "usr": "s:10MiniPubSub9PublisherC7publish5topic7payload13replyCallbackyAA5TopicV_AA7PayloadCyAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish5topic7payload13replyCallbackyAA5TopicV_AA7PayloadCyAA7MessageVctF",
             "moduleName": "MiniPubSub",
             "declAttributes": [
               "AccessControl"
@@ -1961,7 +2031,7 @@
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
       "kind": "StringLiteral",
-      "offset": 2397,
+      "offset": 2506,
       "length": 4,
       "value": "\"{}\""
     },
@@ -2024,28 +2094,42 @@
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 622,
+      "offset": 272,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "StringLiteral",
+      "offset": 424,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "StringLiteral",
+      "offset": 911,
       "length": 49,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 635,
+      "offset": 924,
       "length": 3,
       "value": "\"_id\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "StringLiteral",
-      "offset": 670,
+      "offset": 959,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
       "kind": "IntegerLiteral",
-      "offset": 791,
+      "offset": 1080,
       "length": 2,
       "value": "-1"
     }

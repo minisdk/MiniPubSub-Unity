@@ -78,8 +78,10 @@ public class Payload {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Publisher : MiniPubSub.Node {
+  public func publish(topic: MiniPubSub.Topic)
+  public func publish(topic: MiniPubSub.Topic, replyCallback: @escaping MiniPubSub.ReceiveDelegate)
   public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload)
-  public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload, responseCallback: @escaping MiniPubSub.ReceiveDelegate)
+  public func publish(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload, replyCallback: @escaping MiniPubSub.ReceiveDelegate)
   public func reply(received: MiniPubSub.MessageInfo, payload: MiniPubSub.Payload)
   public func sendSync(topic: MiniPubSub.Topic, payload: MiniPubSub.Payload) -> MiniPubSub.Payload
   @objc deinit

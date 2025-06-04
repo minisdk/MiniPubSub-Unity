@@ -5,7 +5,11 @@ namespace MiniSDK.PubSub
     public class Publisher : Node
     {
         private static readonly IdCounter IdCounter = new IdCounter();
-        
+
+        public void Publish(Topic topic)
+        {
+            Publish(topic, new Payload("{}"));
+        }
         public void Publish(Topic topic, Payload payload)
         {
             NodeInfo nodeInfo = new NodeInfo() { MessageOwnerId = Id, PublisherId = Id };

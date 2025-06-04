@@ -11,25 +11,14 @@ namespace MiniSDK.PubSub
         private readonly ConcurrentDictionary<string, Receiver> instantReceiverDic = new ConcurrentDictionary<string, Receiver>();
         private readonly ConcurrentDictionary<string, Handler> handlerDic = new ConcurrentDictionary<string, Handler>();
         private readonly ConcurrentDictionary<SdkType, Handler> targetHandlerDic = new ConcurrentDictionary<SdkType, Handler>();
-        
-        public void Register(string key, Receiver receiver)
-        {
-            if (receiverDic.ContainsKey(key))
-            {
-                receiverDic[key].Add(receiver);
-            }
-            else
-            {
-                receiverDic[key] = new List<Receiver> {receiver};
-            }
-        }
 
         public void Register(Receiver receiver)
         {
             string key = receiver.Key;
-            if (receiverDic.ContainsKey(key))
+            if (receiverDic.TryGetValue(key, out List<Receiver> receivers))
             {
-                receiverDic[key].Add(receiver);
+                receivers.RemoveAll(element => element.NodeId == receiver.NodeId);
+                receivers.Add(receiver);
             }
             else
             {

@@ -97,3 +97,6 @@ crashlytics-build.properties
 
 .DS_Store
 /[Bb]in
+
+# rider
+.idea

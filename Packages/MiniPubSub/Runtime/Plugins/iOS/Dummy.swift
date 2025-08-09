@@ -1,0 +1,1 @@
+// Dummy Swift file to enable Swift runtime

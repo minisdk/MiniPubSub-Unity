@@ -1,17 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using PJ.Native.Bridge;
-using PJ.Native.Messenger;
-using PJ.Native.Proto;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class SampleScene : MonoBehaviour
 {
+
+    public Button testToastButton;
+
+    public Button testAsyncToastButton;
+    
+    public Button testSyncToastButton;
     // Start is called before the first frame update
+    
+    private readonly SampleKit sample = new SampleKit();
     void Start()
     {
-        SampleKit sample = new SampleKit();
-        sample.CallTest();  
+        sample.Initialize();
+        testToastButton.onClick.AddListener(sample.CallTest);
+        testAsyncToastButton.onClick.AddListener(sample.AsyncCallTest);
+        testSyncToastButton.onClick.AddListener(sample.SyncCallTest);
     }
 }

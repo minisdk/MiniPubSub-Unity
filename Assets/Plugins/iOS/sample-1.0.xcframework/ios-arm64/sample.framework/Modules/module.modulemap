@@ -1,0 +1,4 @@
+framework module sample {
+  header "sample-Swift.h"
+  requires objc
+}

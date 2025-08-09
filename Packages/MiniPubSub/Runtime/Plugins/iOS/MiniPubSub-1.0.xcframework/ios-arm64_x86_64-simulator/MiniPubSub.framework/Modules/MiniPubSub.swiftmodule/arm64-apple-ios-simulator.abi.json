@@ -1,0 +1,2137 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SdkType",
+        "printedName": "SdkType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "native",
+            "printedName": "native",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.SdkType.Type) -> MiniPubSub.SdkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkType",
+                    "printedName": "MiniPubSub.SdkType",
+                    "usr": "s:10MiniPubSub7SdkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MiniPubSub.SdkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SdkType",
+                        "printedName": "MiniPubSub.SdkType",
+                        "usr": "s:10MiniPubSub7SdkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10MiniPubSub7SdkTypeO6nativeyA2CmF",
+            "mangledName": "$s10MiniPubSub7SdkTypeO6nativeyA2CmF",
+            "moduleName": "MiniPubSub"
+          },
+          {
+            "kind": "Var",
+            "name": "game",
+            "printedName": "game",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.SdkType.Type) -> MiniPubSub.SdkType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkType",
+                    "printedName": "MiniPubSub.SdkType",
+                    "usr": "s:10MiniPubSub7SdkTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MiniPubSub.SdkType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SdkType",
+                        "printedName": "MiniPubSub.SdkType",
+                        "usr": "s:10MiniPubSub7SdkTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10MiniPubSub7SdkTypeO4gameyA2CmF",
+            "mangledName": "$s10MiniPubSub7SdkTypeO4gameyA2CmF",
+            "moduleName": "MiniPubSub"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MiniPubSub.SdkType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkType",
+                    "printedName": "MiniPubSub.SdkType",
+                    "usr": "s:10MiniPubSub7SdkTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub7SdkTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s10MiniPubSub7SdkTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub7SdkTypeO8rawValueSivp",
+            "mangledName": "$s10MiniPubSub7SdkTypeO8rawValueSivp",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub7SdkTypeO8rawValueSivg",
+                "mangledName": "$s10MiniPubSub7SdkTypeO8rawValueSivg",
+                "moduleName": "MiniPubSub",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10MiniPubSub7SdkTypeO",
+        "mangledName": "$s10MiniPubSub7SdkTypeO",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IdConuter",
+        "printedName": "IdConuter",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getNext",
+            "printedName": "getNext()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9IdConuterC7getNextSiyF",
+            "mangledName": "$s10MiniPubSub9IdConuterC7getNextSiyF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10MiniPubSub9IdConuterC",
+        "mangledName": "$s10MiniPubSub9IdConuterC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Topic",
+        "printedName": "Topic",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub5TopicV3keySSvp",
+            "mangledName": "$s10MiniPubSub5TopicV3keySSvp",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub5TopicV3keySSvg",
+                "mangledName": "$s10MiniPubSub5TopicV3keySSvg",
+                "moduleName": "MiniPubSub",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "target",
+            "printedName": "target",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkType",
+                "printedName": "MiniPubSub.SdkType",
+                "usr": "s:10MiniPubSub7SdkTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub5TopicV6targetAA7SdkTypeOvp",
+            "mangledName": "$s10MiniPubSub5TopicV6targetAA7SdkTypeOvp",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkType",
+                    "printedName": "MiniPubSub.SdkType",
+                    "usr": "s:10MiniPubSub7SdkTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub5TopicV6targetAA7SdkTypeOvg",
+                "mangledName": "$s10MiniPubSub5TopicV6targetAA7SdkTypeOvg",
+                "moduleName": "MiniPubSub",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(key:target:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SdkType",
+                "printedName": "MiniPubSub.SdkType",
+                "usr": "s:10MiniPubSub7SdkTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub5TopicV3key6targetACSS_AA7SdkTypeOtcfc",
+            "mangledName": "$s10MiniPubSub5TopicV3key6targetACSS_AA7SdkTypeOtcfc",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub5TopicV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10MiniPubSub5TopicV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub5TopicV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10MiniPubSub5TopicV6encode2toys7Encoder_p_tKF",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10MiniPubSub5TopicV",
+        "mangledName": "$s10MiniPubSub5TopicV",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NodeInfo",
+        "printedName": "NodeInfo",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NodeInfo",
+                "printedName": "MiniPubSub.NodeInfo",
+                "usr": "s:10MiniPubSub8NodeInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub8NodeInfoV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10MiniPubSub8NodeInfoV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub8NodeInfoV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10MiniPubSub8NodeInfoV6encode2toys7Encoder_p_tKF",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10MiniPubSub8NodeInfoV",
+        "mangledName": "$s10MiniPubSub8NodeInfoV",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageInfo",
+        "printedName": "MessageInfo",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageInfo",
+                "printedName": "MiniPubSub.MessageInfo",
+                "usr": "s:10MiniPubSub11MessageInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub11MessageInfoV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10MiniPubSub11MessageInfoV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub11MessageInfoV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10MiniPubSub11MessageInfoV6encode2toys7Encoder_p_tKF",
+            "moduleName": "MiniPubSub",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10MiniPubSub11MessageInfoV",
+        "mangledName": "$s10MiniPubSub11MessageInfoV",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Message",
+        "printedName": "Message",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "info",
+            "printedName": "info",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageInfo",
+                "printedName": "MiniPubSub.MessageInfo",
+                "usr": "s:10MiniPubSub11MessageInfoV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub7MessageV4infoAA0D4InfoVvp",
+            "mangledName": "$s10MiniPubSub7MessageV4infoAA0D4InfoVvp",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageInfo",
+                    "printedName": "MiniPubSub.MessageInfo",
+                    "usr": "s:10MiniPubSub11MessageInfoV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub7MessageV4infoAA0D4InfoVvg",
+                "mangledName": "$s10MiniPubSub7MessageV4infoAA0D4InfoVvg",
+                "moduleName": "MiniPubSub",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "payload",
+            "printedName": "payload",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub7MessageV7payloadAA7PayloadCvp",
+            "mangledName": "$s10MiniPubSub7MessageV7payloadAA7PayloadCvp",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Payload",
+                    "printedName": "MiniPubSub.Payload",
+                    "usr": "s:10MiniPubSub7PayloadC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub7MessageV7payloadAA7PayloadCvg",
+                "mangledName": "$s10MiniPubSub7MessageV7payloadAA7PayloadCvg",
+                "moduleName": "MiniPubSub",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "key",
+            "printedName": "key",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub7MessageV3keySSvp",
+            "mangledName": "$s10MiniPubSub7MessageV3keySSvp",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub7MessageV3keySSvg",
+                "mangledName": "$s10MiniPubSub7MessageV3keySSvg",
+                "moduleName": "MiniPubSub",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub7MessageV4dataxSgySeRzSERzlF",
+            "mangledName": "$s10MiniPubSub7MessageV4dataxSgySeRzSERzlF",
+            "moduleName": "MiniPubSub",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10MiniPubSub7MessageV",
+        "mangledName": "$s10MiniPubSub7MessageV",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Watcher",
+        "printedName": "Watcher",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(target:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Watcher",
+                "printedName": "MiniPubSub.Watcher",
+                "usr": "s:10MiniPubSub7WatcherC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SdkType",
+                "printedName": "MiniPubSub.SdkType",
+                "hasDefaultArg": true,
+                "usr": "s:10MiniPubSub7SdkTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub7WatcherC6targetAcA7SdkTypeO_tcfc",
+            "mangledName": "$s10MiniPubSub7WatcherC6targetAcA7SdkTypeO_tcfc",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "watch",
+            "printedName": "watch(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.Message) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub7WatcherC5watch8delegateyyAA7MessageVc_tF",
+            "mangledName": "$s10MiniPubSub7WatcherC5watch8delegateyyAA7MessageVc_tF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unwatch",
+            "printedName": "unwatch()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub7WatcherC7unwatchyyF",
+            "mangledName": "$s10MiniPubSub7WatcherC7unwatchyyF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10MiniPubSub7WatcherC",
+        "mangledName": "$s10MiniPubSub7WatcherC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:10MiniPubSub4NodeC",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "MiniPubSub.Node"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Messenger",
+        "printedName": "Messenger",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(target:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Messenger",
+                "printedName": "MiniPubSub.Messenger",
+                "usr": "s:10MiniPubSub9MessengerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SdkType",
+                "printedName": "MiniPubSub.SdkType",
+                "hasDefaultArg": true,
+                "usr": "s:10MiniPubSub7SdkTypeO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub9MessengerC6targetAcA7SdkTypeO_tcfc",
+            "mangledName": "$s10MiniPubSub9MessengerC6targetAcA7SdkTypeO_tcfc",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "subscribe",
+            "printedName": "subscribe(key:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.Message) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9MessengerC9subscribe3key8delegateySS_yAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9MessengerC9subscribe3key8delegateySS_yAA7MessageVctF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unsubscribe",
+            "printedName": "unsubscribe(key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9MessengerC11unsubscribe3keyySS_tF",
+            "mangledName": "$s10MiniPubSub9MessengerC11unsubscribe3keyySS_tF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handle",
+            "printedName": "handle(key:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.Message) -> MiniPubSub.Payload",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Payload",
+                    "printedName": "MiniPubSub.Payload",
+                    "usr": "s:10MiniPubSub7PayloadC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9MessengerC6handle3key8delegateySS_AA7PayloadCAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9MessengerC6handle3key8delegateySS_AA7PayloadCAA7MessageVctF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10MiniPubSub9MessengerC",
+        "mangledName": "$s10MiniPubSub9MessengerC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "superclassUsr": "s:10MiniPubSub9PublisherC",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "MiniPubSub.Publisher",
+          "MiniPubSub.Node"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Node",
+        "printedName": "Node",
+        "declKind": "Class",
+        "usr": "s:10MiniPubSub4NodeC",
+        "mangledName": "$s10MiniPubSub4NodeC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SwiftCallback",
+        "printedName": "SwiftCallback",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "fromSwift",
+            "printedName": "fromSwift(info:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MiniPubSub@objc(pl)SwiftCallback(im)fromSwiftWithInfo:data:",
+            "mangledName": "$s10MiniPubSub13SwiftCallbackP04fromD04info4dataySS_SStF",
+            "moduleName": "MiniPubSub",
+            "genericSig": "<τ_0_0 where τ_0_0 : MiniPubSub.SwiftCallback>",
+            "sugared_genericSig": "<Self where Self : MiniPubSub.SwiftCallback>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@MiniPubSub@objc(pl)SwiftCallback",
+        "mangledName": "$s10MiniPubSub13SwiftCallbackP",
+        "moduleName": "MiniPubSub",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GameRelay",
+        "printedName": "GameRelay",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GameRelay",
+                "printedName": "MiniPubSub.GameRelay",
+                "usr": "c:@M@MiniPubSub@objc(cs)GameRelay"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SwiftCallback",
+                "printedName": "MiniPubSub.SwiftCallback",
+                "usr": "c:@M@MiniPubSub@objc(pl)SwiftCallback"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MiniPubSub@objc(cs)GameRelay(im)initWithCallback:",
+            "mangledName": "$s10MiniPubSub9GameRelayC8callbackAcA13SwiftCallback_p_tcfc",
+            "moduleName": "MiniPubSub",
+            "objc_name": "initWithCallback:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(info:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MiniPubSub@objc(cs)GameRelay(im)sendWithInfo:data:",
+            "mangledName": "$s10MiniPubSub9GameRelayC4send4info4dataySS_SStF",
+            "moduleName": "MiniPubSub",
+            "objc_name": "sendWithInfo:data:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendSync",
+            "printedName": "sendSync(info:data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MiniPubSub@objc(cs)GameRelay(im)sendSyncWithInfo:data:",
+            "mangledName": "$s10MiniPubSub9GameRelayC8sendSync4info4dataS2S_SStF",
+            "moduleName": "MiniPubSub",
+            "objc_name": "sendSyncWithInfo:data:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GameRelay",
+                "printedName": "MiniPubSub.GameRelay",
+                "usr": "c:@M@MiniPubSub@objc(cs)GameRelay"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MiniPubSub@objc(cs)GameRelay(im)init",
+            "mangledName": "$s10MiniPubSub9GameRelayCACycfc",
+            "moduleName": "MiniPubSub",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@MiniPubSub@objc(cs)GameRelay",
+        "mangledName": "$s10MiniPubSub9GameRelayC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Payload",
+        "printedName": "Payload",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "json",
+            "printedName": "json",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub7PayloadC4jsonSSvp",
+            "mangledName": "$s10MiniPubSub7PayloadC4jsonSSvp",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub7PayloadC4jsonSSvg",
+                "mangledName": "$s10MiniPubSub7PayloadC4jsonSSvg",
+                "moduleName": "MiniPubSub",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(json:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub7PayloadC4jsonACSS_tcfc",
+            "mangledName": "$s10MiniPubSub7PayloadC4jsonACSS_tcfc",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MiniPubSub7PayloadC4dataACx_tcSeRzSERzlufc",
+            "mangledName": "$s10MiniPubSub7PayloadC4dataACx_tcSeRzSERzlufc",
+            "moduleName": "MiniPubSub",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub7PayloadC4dataxSgySeRzSERzlF",
+            "mangledName": "$s10MiniPubSub7PayloadC4dataxSgySeRzSERzlF",
+            "moduleName": "MiniPubSub",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10MiniPubSub7PayloadC",
+        "mangledName": "$s10MiniPubSub7PayloadC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Publisher",
+        "printedName": "Publisher",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "publish",
+            "printedName": "publish(topic:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC7publish5topicyAA5TopicV_tF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish5topicyAA5TopicV_tF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "publish",
+            "printedName": "publish(topic:replyCallback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.Message) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC7publish5topic13replyCallbackyAA5TopicV_yAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish5topic13replyCallbackyAA5TopicV_yAA7MessageVctF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "publish",
+            "printedName": "publish(topic:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC7publish5topic7payloadyAA5TopicV_AA7PayloadCtF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish5topic7payloadyAA5TopicV_AA7PayloadCtF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "publish",
+            "printedName": "publish(topic:payload:replyCallback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MiniPubSub.Message) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Message",
+                    "printedName": "MiniPubSub.Message",
+                    "usr": "s:10MiniPubSub7MessageV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC7publish5topic7payload13replyCallbackyAA5TopicV_AA7PayloadCyAA7MessageVctF",
+            "mangledName": "$s10MiniPubSub9PublisherC7publish5topic7payload13replyCallbackyAA5TopicV_AA7PayloadCyAA7MessageVctF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reply",
+            "printedName": "reply(received:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MessageInfo",
+                "printedName": "MiniPubSub.MessageInfo",
+                "usr": "s:10MiniPubSub11MessageInfoV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC5reply8received7payloadyAA11MessageInfoV_AA7PayloadCtF",
+            "mangledName": "$s10MiniPubSub9PublisherC5reply8received7payloadyAA11MessageInfoV_AA7PayloadCtF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendSync",
+            "printedName": "sendSync(topic:payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Topic",
+                "printedName": "MiniPubSub.Topic",
+                "usr": "s:10MiniPubSub5TopicV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "MiniPubSub.Payload",
+                "usr": "s:10MiniPubSub7PayloadC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MiniPubSub9PublisherC8sendSync5topic7payloadAA7PayloadCAA5TopicV_AHtF",
+            "mangledName": "$s10MiniPubSub9PublisherC8sendSync5topic7payloadAA7PayloadCAA5TopicV_AHtF",
+            "moduleName": "MiniPubSub",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10MiniPubSub9PublisherC",
+        "mangledName": "$s10MiniPubSub9PublisherC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:10MiniPubSub4NodeC",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "MiniPubSub.Node"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MessageManager",
+        "printedName": "MessageManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MessageManager",
+                "printedName": "MiniPubSub.MessageManager",
+                "usr": "s:10MiniPubSub14MessageManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MiniPubSub14MessageManagerC6sharedACvpZ",
+            "mangledName": "$s10MiniPubSub14MessageManagerC6sharedACvpZ",
+            "moduleName": "MiniPubSub",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageManager",
+                    "printedName": "MiniPubSub.MessageManager",
+                    "usr": "s:10MiniPubSub14MessageManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MiniPubSub14MessageManagerC6sharedACvgZ",
+                "mangledName": "$s10MiniPubSub14MessageManagerC6sharedACvgZ",
+                "moduleName": "MiniPubSub",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10MiniPubSub14MessageManagerC",
+        "mangledName": "$s10MiniPubSub14MessageManagerC",
+        "moduleName": "MiniPubSub",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/SdkInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 160,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/SdkInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 184,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/SdkInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 160,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/SdkInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 184,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/SdkInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 160,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/SdkInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 184,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/SdkInfo.swift",
+      "kind": "IntegerLiteral",
+      "offset": 427,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/Topic.swift",
+      "kind": "StringLiteral",
+      "offset": 232,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Watcher.swift",
+      "kind": "StringLiteral",
+      "offset": 171,
+      "length": 22,
+      "value": "\"Key_Watcher_Reserved\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Watcher.swift",
+      "kind": "StringLiteral",
+      "offset": 115,
+      "length": 7,
+      "value": "\"MiniPubSub.Watcher\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Messenger.swift",
+      "kind": "StringLiteral",
+      "offset": 123,
+      "length": 9,
+      "value": "\"MiniPubSub.Messenger\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 193,
+      "length": 22,
+      "value": "\"Key_Watcher_Reserved\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "Dictionary",
+      "offset": 459,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "Dictionary",
+      "offset": 492,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "Dictionary",
+      "offset": 517,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "Dictionary",
+      "offset": 548,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/MessageMediatorImpl.swift",
+      "kind": "StringLiteral",
+      "offset": 2506,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 656,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 950,
+      "length": 25,
+      "value": "\"Message decode error : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 1261,
+      "length": 25,
+      "value": "\"Message decode error : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 1314,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 1612,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 1768,
+      "length": 29,
+      "value": "\"MessageInfo encode error : \""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/Bridge\/GameRelay.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 9,
+      "value": "\"MiniPubSub.GameRelay\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Data\/Payload.swift",
+      "kind": "StringLiteral",
+      "offset": 486,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "StringLiteral",
+      "offset": 272,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "StringLiteral",
+      "offset": 424,
+      "length": 4,
+      "value": "\"{}\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "StringLiteral",
+      "offset": 911,
+      "length": 49,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "StringLiteral",
+      "offset": 924,
+      "length": 3,
+      "value": "\"_id\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "StringLiteral",
+      "offset": 959,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/sangminpark\/repo\/iOSBridge\/MiniPubSub\/PubSub\/Publisher.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1080,
+      "length": 2,
+      "value": "-1"
+    }
+  ]
+}

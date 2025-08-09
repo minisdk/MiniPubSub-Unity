@@ -1,0 +1,4 @@
+[submodule "Packages/NativePubSub"]
+	path = Packages/NativePubSub
+	url = https://github.com/psmjazz/NativePubSub-Unity.git
+	branch = develop

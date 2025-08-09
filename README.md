@@ -3,7 +3,9 @@
 직렬화된 데이터를 발행하여 사전 등록된 구독자들에게 전달합니다.
 
 ## 시작하기
-[Release](https://github.com/minisdk/MiniPubSub-Unity/releases) 에서 unitypackage를 다운 받아 프로젝트에 임포트합니다.
+1. Unity Package Manager을 엽니다.
+2. 좌측 상단의 + 버튼을 눌러 Add package from git URL... 을 선택합니다.
+3. `https://github.com/minisdk/MiniPubSub-Unity.git?path=Package/MiniPubSub` 을 추가(Add) 합니다.
 
 ## 주요 요소들
 

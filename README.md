@@ -2,6 +2,11 @@
 유니티 엔진과 모바일 플랫폼 간 통신을 위한 pubsub 방식의 라이브러리입니다.
 직렬화된 데이터를 발행하여 사전 등록된 구독자들에게 전달합니다.
 
+## 같이 보기
+- [MiniPubSub-Android](https://github.com/minisdk/MiniPubSub-Android)
+- [MiniPubSub-iOS](https://github.com/minisdk/MiniPubSub-iOS)
+- [MiniPubSub-Unreal](https://github.com/minisdk/MiniPubSub-Unreal)
+
 ## 시작하기
 1. Unity Package Manager을 엽니다.
 2. 좌측 상단의 + 버튼을 눌러 Add package from git URL... 을 선택합니다.

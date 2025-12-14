@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace MiniSDK.Native
+namespace MiniSDK.PubSub.Native
 {
     public class AndroidBridgeProxy : AndroidJavaProxy
     {

@@ -1,5 +1,6 @@
 using MiniSDK.PubSub;
 using MiniSDK.PubSub.Data;
+using MiniSDK.PubSub.ModuleHelper;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -36,12 +37,11 @@ public class SampleKit
     public void Initialize()
     {
 #if UNITY_ANDROID
-        AndroidJavaClass loaderClass = new AndroidJavaClass("com.pj.sample.SampleKitLoader");
-        loaderClass.CallStatic("load");
+        ModuleHelper.LoadPlugin("com.pj.sample.SampleKit");
 #elif UNITY_IOS
-        __iOSSampleKitLoad(); 
+        ModuleHelper.LoadPlugin("SampleKit");
 #endif
-        messenger = new Messenger();
+        messenger = PubSubManager.Instance.CreateMessenger();
         messenger.Subscribe("SEND_TOAST_RESULT", OnNative);
     }
 

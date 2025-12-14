@@ -1,6 +1,6 @@
 {
   "name": "com.minisdk.minipubsub",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "displayName": "MiniPubSub",
   "description": "Helps communication with native code",
   "unity": "2021.3",

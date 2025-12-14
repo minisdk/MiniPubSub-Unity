@@ -9,7 +9,7 @@ namespace MiniSDK.PubSub
     {
         private readonly SdkType target;
 
-        public Messenger(SdkType target = SdkType.Game)
+        internal Messenger(SdkType target = SdkType.Game)
         {
             this.target = target;
         }

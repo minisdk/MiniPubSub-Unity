@@ -1,12 +1,15 @@
 using System;
 
-using MiniSDK.Core.Util;
 using MiniSDK.PubSub.Data;
 
 namespace MiniSDK.PubSub
 {
-    public class MessageManager : Singleton<MessageManager>
+    public class MessageManager
     {
+        public static MessageManager Instance { get; private set; } = new MessageManager();
+
+        private MessageManager() { }
+
         private readonly Lazy<MessageMediator> lazyMediator = new Lazy<MessageMediator>(()=> new MessageMediatorImpl());
         internal MessageMediator Mediator => lazyMediator.Value;
     }

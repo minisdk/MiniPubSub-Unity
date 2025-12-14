@@ -3,7 +3,7 @@ using System;
 using System.Runtime.InteropServices;
 using AOT;
 
-namespace MiniSDK.Native
+namespace MiniSDK.PubSub.Native
 {
     public class IOSBridge : INativeBridge
     {

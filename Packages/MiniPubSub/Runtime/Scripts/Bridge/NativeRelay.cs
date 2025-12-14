@@ -1,9 +1,8 @@
-using MiniSDK.PubSub;
 using Newtonsoft.Json;
 using MiniSDK.PubSub.Data;
 using UnityEngine;
 
-namespace MiniSDK.Native
+namespace MiniSDK.PubSub.Native
 {
     public class NativeRelay
     {

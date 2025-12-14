@@ -1,5 +1,5 @@
 
-namespace MiniSDK.Native
+namespace MiniSDK.PubSub.Native
 {
     public class NativeBridge : INativeBridge
     {

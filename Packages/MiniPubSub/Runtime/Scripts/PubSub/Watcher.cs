@@ -8,7 +8,7 @@ namespace MiniSDK.PubSub
 
         private readonly SdkType target;
 
-        public Watcher(SdkType target = SdkType.Game)
+        internal Watcher(SdkType target = SdkType.Game)
         {
             this.target = target;
         }

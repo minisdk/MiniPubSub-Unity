@@ -1,5 +1,5 @@
 #if UNITY_EDITOR
-namespace MiniSDK.Native
+namespace MiniSDK.PubSub.Native
 {
     public class EditorBridge : INativeBridge
     {

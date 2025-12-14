@@ -6,6 +6,8 @@ namespace MiniSDK.PubSub
     {
         private static readonly IdCounter IdCounter = new IdCounter();
 
+        internal Publisher() { }
+
         public void Publish(Topic topic)
         {
             Publish(topic, new Payload("{}"));
